@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>明代科舉《春秋》義題目資料庫</title>
+<style>
+:root {
+  --primary: #8B4513;
+  --primary-light: #A0522D;
+  --bg: #FFF8F0;
+  --card-bg: #FFFFFF;
+  --border: #D2B48C;
+  --text: #2C1810;
+  --text-light: #6B4226;
+  --accent: #C41E3A;
+  --tag-hui: #4472C4;
+  --tag-ying: #2E8B57;
+  --tag-shun: #B8860B;
+  --hover: #FFF0E0;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: "Noto Serif TC", "Source Han Serif TC", "PMingLiU", serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+}
+header {
+  background: linear-gradient(135deg, var(--primary) 0%, #5C2D0E 100%);
+  color: #FFF8F0;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+header h1 { font-size: 1.8rem; font-weight: 700; letter-spacing: 0.15em; margin-bottom: 0.3rem; }
+header p { font-size: 0.95rem; opacity: 0.85; letter-spacing: 0.05em; }
+.container { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem; }
+
+/* Stats */
+.stats-bar { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.stat-card { flex: 1; min-width: 120px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 0.8rem; text-align: center; }
+.stat-card .num { font-size: 1.6rem; font-weight: 700; color: var(--primary); }
+.stat-card .label { font-size: 0.8rem; color: var(--text-light); }
+
+/* Controls */
+.controls {
+  background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px;
+  padding: 1rem 1.2rem; margin-bottom: 1.5rem;
+  display: flex; flex-wrap: wrap; gap: 0.8rem; align-items: center;
+}
+.search-box { flex: 1; min-width: 200px; position: relative; }
+.search-box input {
+  width: 100%; padding: 0.6rem 0.8rem 0.6rem 2.2rem;
+  border: 1px solid var(--border); border-radius: 6px; font-size: 0.95rem;
+  font-family: inherit; outline: none; transition: border-color 0.2s;
+}
+.search-box input:focus { border-color: var(--primary); }
+.search-box::before { content: "\1F50D"; position: absolute; left: 0.7rem; top: 50%; transform: translateY(-50%); font-size: 0.9rem; }
+select {
+  padding: 0.6rem 0.8rem; border: 1px solid var(--border); border-radius: 6px;
+  font-size: 0.9rem; font-family: inherit; background: #fff; cursor: pointer; outline: none;
+}
+select:focus { border-color: var(--primary); }
+.result-count { font-size: 0.85rem; color: var(--text-light); white-space: nowrap; }
+
+/* Table */
+.table-wrap { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+thead th {
+  background: var(--primary); color: #fff; padding: 0.7rem 0.6rem; font-weight: 600;
+  white-space: nowrap; position: sticky; top: 0; z-index: 10; cursor: pointer; user-select: none;
+}
+thead th:hover { background: var(--primary-light); }
+tbody tr { border-bottom: 1px solid #F0E0D0; transition: background 0.15s; cursor: pointer; }
+tbody tr:hover { background: var(--hover); }
+tbody td { padding: 0.6rem; vertical-align: top; }
+td.center { text-align: center; }
+
+.tag { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600; color: #fff; white-space: nowrap; }
+.tag-hui { background: var(--tag-hui); }
+.tag-ying { background: var(--tag-ying); }
+.tag-shun { background: var(--tag-shun); }
+
+.stock-list { display: flex; flex-direction: column; gap: 0.25rem; }
+.stock-item { display: flex; gap: 0.4rem; align-items: baseline; line-height: 1.5; }
+.stock-duke { font-size: 0.8rem; color: var(--accent); white-space: nowrap; }
+.stock-text { font-size: 0.88rem; }
+
+/* Pagination */
+.pagination { display: flex; justify-content: center; align-items: center; gap: 0.5rem; margin-top: 1.2rem; flex-wrap: wrap; }
+.pagination button {
+  padding: 0.4rem 0.8rem; border: 1px solid var(--border); border-radius: 6px;
+  background: var(--card-bg); cursor: pointer; font-family: inherit; font-size: 0.85rem; transition: all 0.15s;
+}
+.pagination button:hover:not(:disabled) { background: var(--hover); border-color: var(--primary); }
+.pagination button:disabled { opacity: 0.4; cursor: default; }
+.pagination button.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+.pagination .page-info { font-size: 0.85rem; color: var(--text-light); }
+
+/* Modal */
+.modal-overlay {
+  display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5);
+  z-index: 100; justify-content: center; align-items: flex-start; padding: 2rem 1rem; overflow-y: auto;
+}
+.modal-overlay.show { display: flex; }
+.modal {
+  background: var(--card-bg); border-radius: 12px; max-width: 750px; width: 100%;
+  padding: 1.5rem; margin: auto;
+}
+.modal h2 { font-size: 1.15rem; color: var(--primary); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+
+.detail-meta span { display: inline-block; margin-right: 1rem; font-size: 0.9rem; }
+.detail-meta .key { color: var(--text-light); }
+.stock-detail-row { display: flex; gap: 0.6rem; padding: 0.6rem 0; border-bottom: 1px solid #F0E0D0; align-items: baseline; }
+.stock-detail-row:last-child { border-bottom: none; }
+.stock-num { font-size: 0.85rem; color: var(--accent); font-weight: 600; white-space: nowrap; }
+.stock-info { flex: 1; }
+.stock-info .code-line { font-size: 0.8rem; color: var(--text-light); }
+.stock-info .text-line { font-size: 1rem; margin-top: 0.2rem; }
+
+.btn {
+  padding: 0.5rem 1rem; border: 1px solid var(--border); border-radius: 6px;
+  background: var(--card-bg); cursor: pointer; font-family: inherit; font-size: 0.85rem;
+  transition: all 0.15s;
+}
+.btn:hover { background: var(--hover); border-color: var(--primary); }
+.form-actions { display: flex; gap: 0.6rem; justify-content: flex-end; margin-top: 1.2rem; padding-top: 0.8rem; border-top: 1px solid var(--border); }
+
+footer { text-align: center; padding: 1.5rem; color: var(--text-light); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+
+@media (max-width: 768px) {
+  header h1 { font-size: 1.3rem; }
+  .controls { flex-direction: column; }
+  .search-box { min-width: 100%; }
+  table { font-size: 0.82rem; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>明代科舉《春秋》義題目資料庫</h1>
+  <p>Ming Dynasty Civil Examination Spring and Autumn Annals Question Database</p>
+</header>
+
+<div class="container">
+  <div class="stats-bar" id="stats-bar">
+    <div class="stat-card"><div class="num" id="stat-total">-</div><div class="label">題目總數</div></div>
+  </div>
+
+  <div class="controls">
+    <div class="search-box">
+      <input type="text" id="search" placeholder="搜尋經文、試年、經年...">
+    </div>
+    <select id="filter-type">
+      <option value="">全部考試</option>
+      <option value="會試">會試</option>
+      <option value="應天鄉試">應天鄉試</option>
+      <option value="順天鄉試">順天鄉試</option>
+      <option value="浙江鄉試">浙江鄉試</option>
+      <option value="江西鄉試">江西鄉試</option>
+      <option value="福建鄉試">福建鄉試</option>
+      <option value="湖廣鄉試">湖廣鄉試</option>
+      <option value="河南鄉試">河南鄉試</option>
+      <option value="山東鄉試">山東鄉試</option>
+      <option value="山西鄉試">山西鄉試</option>
+      <option value="陝西鄉試">陝西鄉試</option>
+      <option value="四川鄉試">四川鄉試</option>
+      <option value="廣東鄉試">廣東鄉試</option>
+      <option value="廣西鄉試">廣西鄉試</option>
+      <option value="雲貴鄉試">雲貴鄉試</option>
+      <option value="雲南鄉試">雲南鄉試</option>
+      <option value="貴州鄉試">貴州鄉試</option>
+    </select>
+    <select id="filter-duke">
+      <option value="">全部時代</option>
+      <option value="隱公">隱公</option><option value="桓公">桓公</option>
+      <option value="莊公">莊公</option><option value="閔公">閔公</option>
+      <option value="僖公">僖公</option><option value="文公">文公</option>
+      <option value="宣公">宣公</option><option value="成公">成公</option>
+      <option value="襄公">襄公</option><option value="昭公">昭公</option>
+      <option value="定公">定公</option><option value="哀公">哀公</option>
+    </select>
+    <span class="result-count" id="result-count"></span>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th data-sort="id" style="width:45px">#</th>
+          <th data-sort="examType" style="width:85px">考試</th>
+          <th data-sort="examYear" style="width:105px">試年</th>
+          <th data-sort="questionSeq" style="width:45px">題次</th>
+          <th data-sort="stockCount" style="width:45px">股數</th>
+          <th>題目內容</th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
+  </div>
+  <div class="pagination" id="pagination"></div>
+</div>
+
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal" id="modal-content"></div>
+</div>
+
+<footer>明代科舉《春秋》義題目資料庫</footer>
+
+<script>
+let DATA = [];
+let filtered = [];
+let sortKey = 'id';
+let sortAsc = true;
+const PAGE_SIZE = 30;
+let currentPage = 1;
+
+const dynastyOrder = {'洪武':1,'建文':2,'永樂':3,'洪熙':4,'宣德':5,'正統':6,'景泰':7,'天順':8,'成化':9,'弘治':10,'正德':11,'嘉靖':12,'隆慶':13,'萬曆':14,'泰昌':15,'天啟':16,'崇禎':17};
+const cnNums = {'元':1,'一':1,'二':2,'三':3,'四':4,'五':5,'六':6,'七':7,'八':8,'九':9,'十':10,'十一':11,'十二':12,'十三':13,'十四':14,'十五':15,'十六':16,'十七':17,'十八':18,'十九':19,'二十':20,'二十一':21,'二十二':22,'二十三':23,'二十四':24,'二十五':25,'二十六':26,'二十七':27,'二十八':28,'二十九':29,'三十':30,'三十一':31,'三十二':32,'三十三':33,'三十四':34,'三十五':35,'三十六':36,'三十七':37,'三十八':38,'四十':40,'四十一':41,'四十二':42,'四十三':43,'四十四':44,'四十五':45,'四十六':46,'四十七':47,'四十八':48};
+
+function yearToNum(y) {
+  if (!y) return 9999;
+  for (const [prefix, ord] of Object.entries(dynastyOrder)) {
+    if (y.startsWith(prefix)) { return ord * 100 + (cnNums[y.slice(prefix.length).replace('年','')] || 0); }
+  }
+  return 9999;
+}
+function tagClass(t) { return t === '會試' ? 'tag-hui' : t === '應天鄉試' ? 'tag-ying' : 'tag-shun'; }
+function esc(s) { return s ? s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') : ''; }
+function debounce(fn, d) { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), d); }; }
+
+function updateStats() {
+  document.getElementById('stat-total').textContent = DATA.length;
+  const bar = document.getElementById('stats-bar');
+  while (bar.children.length > 1) bar.removeChild(bar.lastChild);
+  const counts = {};
+  DATA.forEach(q => { counts[q.examType] = (counts[q.examType]||0) + 1; });
+  const order = ['會試','應天鄉試','順天鄉試','浙江鄉試','江西鄉試','福建鄉試','湖廣鄉試','河南鄉試','山東鄉試','山西鄉試','陝西鄉試','四川鄉試','廣東鄉試','廣西鄉試','雲貴鄉試','雲南鄉試','貴州鄉試'];
+  for (const t of order) {
+    if (counts[t]) {
+      const card = document.createElement('div');
+      card.className = 'stat-card';
+      card.innerHTML = `<div class="num">${counts[t]}</div><div class="label">${t}</div>`;
+      bar.appendChild(card);
+    }
+  }
+  for (const [t, c] of Object.entries(counts)) {
+    if (!order.includes(t)) {
+      const card = document.createElement('div');
+      card.className = 'stat-card';
+      card.innerHTML = `<div class="num">${c}</div><div class="label">${t}</div>`;
+      bar.appendChild(card);
+    }
+  }
+}
+
+function applyFilters() {
+  const search = document.getElementById('search').value.trim().toLowerCase();
+  const fType = document.getElementById('filter-type').value;
+  const fDuke = document.getElementById('filter-duke').value;
+  filtered = DATA.filter(q => {
+    if (fType && q.examType !== fType) return false;
+    if (fDuke && !q.stocks.some(s => s.duke === fDuke)) return false;
+    if (search) {
+      const hay = (q.examYear + ' ' + q.fullText + ' ' + (q.source||'') + ' ' + q.stocks.map(s => (s.duke||'') + (s.year||'') + (s.text||'')).join(' ')).toLowerCase();
+      if (!hay.includes(search)) return false;
+    }
+    return true;
+  });
+  applySort(); currentPage = 1; render();
+}
+
+function applySort() {
+  filtered.sort((a, b) => {
+    let va, vb;
+    if (sortKey === 'examYear') { va = yearToNum(a.examYear); vb = yearToNum(b.examYear); }
+    else { va = a[sortKey]; vb = b[sortKey]; }
+    if (va == null) va = ''; if (vb == null) vb = '';
+    const cmp = typeof va === 'string' ? va.localeCompare(vb, 'zh-Hant') : va - vb;
+    return sortAsc ? cmp : -cmp;
+  });
+}
+
+function renderStocksPreview(stocks) {
+  if (!stocks || !stocks.length) return '';
+  let html = '<div class="stock-list">';
+  const show = stocks.slice(0, 3);
+  for (const s of show) {
+    html += '<div class="stock-item">';
+    if (s.duke && s.duke !== '?') html += `<span class="stock-duke">${esc(s.duke)}${s.year !== '?' ? s.year + '年' : ''}</span>`;
+    const txt = s.text || '';
+    html += `<span class="stock-text">${esc(txt.substring(0, 35))}${txt.length > 35 ? '...' : ''}</span></div>`;
+  }
+  if (stocks.length > 3) html += `<div style="font-size:0.78rem;color:var(--text-light)">...及其他 ${stocks.length - 3} 股</div>`;
+  return html + '</div>';
+}
+
+function render() {
+  const tbody = document.getElementById('table-body');
+  const start = (currentPage - 1) * PAGE_SIZE;
+  const pageData = filtered.slice(start, start + PAGE_SIZE);
+  let html = '';
+  for (const q of pageData) {
+    html += `<tr onclick="showDetail(${q.id})">
+      <td class="center">${q.id}</td>
+      <td class="center"><span class="tag ${tagClass(q.examType)}">${q.examType}</span></td>
+      <td class="center">${esc(q.examYear)}${q.source ? '<br><span style="font-size:0.73rem;color:var(--text-light)">(' + esc(q.source) + ')</span>' : ''}</td>
+      <td class="center">${q.questionSeq || ''}</td>
+      <td class="center">${q.stockCount}</td>
+      <td>${renderStocksPreview(q.stocks)}</td>
+    </tr>`;
+  }
+  tbody.innerHTML = html;
+  document.getElementById('result-count').textContent = `${filtered.length} / ${DATA.length} 題`;
+  renderPagination();
+}
+
+function renderPagination() {
+  const tp = Math.ceil(filtered.length / PAGE_SIZE);
+  const el = document.getElementById('pagination');
+  if (tp <= 1) { el.innerHTML = ''; return; }
+  let html = `<button onclick="goPage(${currentPage-1})" ${currentPage<=1?'disabled':''}>&laquo;</button>`;
+  let pages = [1]; for (let i = Math.max(2,currentPage-2); i <= Math.min(tp-1,currentPage+2); i++) pages.push(i);
+  if (tp > 1) pages.push(tp); pages = [...new Set(pages)].sort((a,b)=>a-b);
+  let last = 0;
+  for (const p of pages) {
+    if (p - last > 1) html += '<span class="page-info">...</span>';
+    html += `<button onclick="goPage(${p})" class="${p===currentPage?'active':''}">${p}</button>`; last = p;
+  }
+  html += `<button onclick="goPage(${currentPage+1})" ${currentPage>=tp?'disabled':''}>&raquo;</button>`;
+  html += `<span class="page-info">${currentPage}/${tp}</span>`;
+  el.innerHTML = html;
+}
+function goPage(p) {
+  const tp = Math.ceil(filtered.length / PAGE_SIZE);
+  if (p < 1 || p > tp) return; currentPage = p; render();
+  document.querySelector('.table-wrap').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function showDetail(id) {
+  const q = DATA.find(x => x.id === id); if (!q) return;
+  let html = `<h2>${esc(q.examYear)} ${esc(q.examType)} 第${q.questionSeq}題</h2>`;
+  html += `<div class="detail-meta" style="margin-bottom:1rem">`;
+  html += `<span><span class="key">考試：</span><span class="tag ${tagClass(q.examType)}">${q.examType}</span></span>`;
+  html += `<span><span class="key">試年：</span>${esc(q.examYear)}</span>`;
+  html += `<span><span class="key">出處：</span>${esc(q.source||'')}</span>`;
+  html += `</div>`;
+  html += '<div>';
+  for (const s of q.stocks) {
+    html += `<div class="stock-detail-row"><div class="stock-num">第${s.seq}股</div><div class="stock-info">`;
+    if (s.duke && s.duke !== '?') html += `<div class="code-line">${esc(s.duke)}${s.year!=='?'?s.year+'年':''}</div>`;
+    html += `<div class="text-line">${esc(s.text)}</div></div></div>`;
+  }
+  html += '</div>';
+  html += `<div class="form-actions"><button class="btn" onclick="closeModal()">關閉</button></div>`;
+  document.getElementById('modal-content').innerHTML = html;
+  document.getElementById('modal-overlay').classList.add('show');
+}
+
+function closeModal() { document.getElementById('modal-overlay').classList.remove('show'); }
+
+// Events
+document.getElementById('modal-overlay').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+document.getElementById('search').addEventListener('input', debounce(applyFilters, 300));
+['filter-type','filter-duke'].forEach(id => document.getElementById(id).addEventListener('change', applyFilters));
+document.querySelectorAll('thead th[data-sort]').forEach(th => {
+  th.addEventListener('click', () => {
+    const key = th.dataset.sort;
+    if (sortKey === key) sortAsc = !sortAsc; else { sortKey = key; sortAsc = true; }
+    applySort(); currentPage = 1; render();
+  });
+});
+
+// Init - always load from data.json (no localStorage)
+fetch('data.json').then(r => r.json()).then(data => {
+  DATA = data; updateStats(); filtered = [...DATA]; render();
+}).catch(() => { document.getElementById('table-body').innerHTML = '<tr><td colspan="6" style="text-align:center;padding:2rem">載入資料失敗，請確認 data.json 存在。</td></tr>'; });
+</script>
+</body>
+</html>
