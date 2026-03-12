@@ -202,11 +202,8 @@ footer { text-align: center; padding: 1.5rem; color: var(--text-light); font-siz
 </header>
 
 <div class="container">
-  <div class="stats-bar">
+  <div class="stats-bar" id="stats-bar">
     <div class="stat-card"><div class="num" id="stat-total">-</div><div class="label">題目總數</div></div>
-    <div class="stat-card"><div class="num" id="stat-hui">-</div><div class="label">會試</div></div>
-    <div class="stat-card"><div class="num" id="stat-ying">-</div><div class="label">應天鄉試</div></div>
-    <div class="stat-card"><div class="num" id="stat-shun">-</div><div class="label">順天鄉試</div></div>
   </div>
 
   <div class="toolbar">
@@ -227,6 +224,20 @@ footer { text-align: center; padding: 1.5rem; color: var(--text-light); font-siz
       <option value="會試">會試</option>
       <option value="應天鄉試">應天鄉試</option>
       <option value="順天鄉試">順天鄉試</option>
+      <option value="浙江鄉試">浙江鄉試</option>
+      <option value="江西鄉試">江西鄉試</option>
+      <option value="福建鄉試">福建鄉試</option>
+      <option value="湖廣鄉試">湖廣鄉試</option>
+      <option value="河南鄉試">河南鄉試</option>
+      <option value="山東鄉試">山東鄉試</option>
+      <option value="山西鄉試">山西鄉試</option>
+      <option value="陝西鄉試">陝西鄉試</option>
+      <option value="四川鄉試">四川鄉試</option>
+      <option value="廣東鄉試">廣東鄉試</option>
+      <option value="廣西鄉試">廣西鄉試</option>
+      <option value="雲貴鄉試">雲貴鄉試</option>
+      <option value="雲南鄉試">雲南鄉試</option>
+      <option value="貴州鄉試">貴州鄉試</option>
     </select>
     <select id="filter-duke">
       <option value="">全部時代</option>
@@ -236,12 +247,6 @@ footer { text-align: center; padding: 1.5rem; color: var(--text-light); font-siz
       <option value="宣公">宣公</option><option value="成公">成公</option>
       <option value="襄公">襄公</option><option value="昭公">昭公</option>
       <option value="定公">定公</option><option value="哀公">哀公</option>
-    </select>
-    <select id="filter-stocks">
-      <option value="">全部股數</option>
-      <option value="1">1 股</option><option value="2">2 股</option>
-      <option value="3">3 股</option><option value="4">4 股</option>
-      <option value="5+">5 股以上</option>
     </select>
     <span class="result-count" id="result-count"></span>
   </div>
@@ -293,6 +298,7 @@ function yearToNum(y) {
   return 9999;
 }
 function tagClass(t) { return t === '會試' ? 'tag-hui' : t === '應天鄉試' ? 'tag-ying' : 'tag-shun'; }
+function tagLabel(t) { return t; }
 function esc(s) { return s ? s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') : ''; }
 function debounce(fn, d) { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), d); }; }
 function toast(msg) {
@@ -311,20 +317,38 @@ function loadFromLocal() { try { const s = localStorage.getItem('chunqiu_db'); r
 
 function updateStats() {
   document.getElementById('stat-total').textContent = DATA.length;
-  document.getElementById('stat-hui').textContent = DATA.filter(q => q.examType === '會試').length;
-  document.getElementById('stat-ying').textContent = DATA.filter(q => q.examType === '應天鄉試').length;
-  document.getElementById('stat-shun').textContent = DATA.filter(q => q.examType === '順天鄉試').length;
+  const bar = document.getElementById('stats-bar');
+  // Keep the total card, rebuild the rest
+  while (bar.children.length > 1) bar.removeChild(bar.lastChild);
+  const counts = {};
+  DATA.forEach(q => { counts[q.examType] = (counts[q.examType]||0) + 1; });
+  const order = ['會試','應天鄉試','順天鄉試','浙江鄉試','江西鄉試','福建鄉試','湖廣鄉試','河南鄉試','山東鄉試','山西鄉試','陝西鄉試','四川鄉試','廣東鄉試','廣西鄉試','雲貴鄉試','雲南鄉試','貴州鄉試'];
+  for (const t of order) {
+    if (counts[t]) {
+      const card = document.createElement('div');
+      card.className = 'stat-card';
+      card.innerHTML = `<div class="num">${counts[t]}</div><div class="label">${t}</div>`;
+      bar.appendChild(card);
+    }
+  }
+  // any other types not in the predefined order
+  for (const [t, c] of Object.entries(counts)) {
+    if (!order.includes(t)) {
+      const card = document.createElement('div');
+      card.className = 'stat-card';
+      card.innerHTML = `<div class="num">${c}</div><div class="label">${t}</div>`;
+      bar.appendChild(card);
+    }
+  }
 }
 
 function applyFilters() {
   const search = document.getElementById('search').value.trim().toLowerCase();
   const fType = document.getElementById('filter-type').value;
   const fDuke = document.getElementById('filter-duke').value;
-  const fStocks = document.getElementById('filter-stocks').value;
   filtered = DATA.filter(q => {
     if (fType && q.examType !== fType) return false;
     if (fDuke && !q.stocks.some(s => s.duke === fDuke)) return false;
-    if (fStocks) { if (fStocks === '5+') { if (q.stockCount < 5) return false; } else { if (q.stockCount !== parseInt(fStocks)) return false; } }
     if (search) {
       const hay = (q.examYear + ' ' + q.fullText + ' ' + (q.source||'') + ' ' + q.stocks.map(s => (s.duke||'') + (s.year||'') + (s.text||'') + (s.code||'')).join(' ')).toLowerCase();
       if (!hay.includes(search)) return false;
@@ -417,15 +441,13 @@ function showDetail(id) {
   let html = `<h2>${esc(q.examYear)} ${esc(q.examType)} 第${q.questionSeq}題</h2>`;
   html += `<div class="detail-meta" style="margin-bottom:1rem">`;
   html += `<span><span class="key">考試：</span><span class="tag ${tagClass(q.examType)}">${q.examType}</span></span>`;
-  html += `<span><span class="key">科次：</span>${q.session||''}</span>`;
   html += `<span><span class="key">試年：</span>${esc(q.examYear)}</span>`;
-  if (q.source) html += `<span><span class="key">出處：</span>${esc(q.source)}</span>`;
-  html += `<span><span class="key">股數：</span>${q.stockCount}</span></div>`;
+  html += `<span><span class="key">出處：</span>${esc(q.source||'')}</span>`;
+  html += `</div>`;
   html += '<div>';
   for (const s of q.stocks) {
     html += `<div class="stock-detail-row"><div class="stock-num">第${s.seq}股</div><div class="stock-info">`;
-    if (s.code && s.code !== '[docx]') html += `<div class="code-line">${esc(s.code)} &mdash; ${esc(s.duke)}${s.year!=='?'?s.year+'年':''}</div>`;
-    else if (s.duke && s.duke !== '?') html += `<div class="code-line">${esc(s.duke)}${s.year!=='?'?s.year+'年':''}</div>`;
+    if (s.duke && s.duke !== '?') html += `<div class="code-line">${esc(s.duke)}${s.year!=='?'?s.year+'年':''}</div>`;
     html += `<div class="text-line">${esc(s.text)}</div></div></div>`;
   }
   html += '</div>';
@@ -443,10 +465,11 @@ function buildFormHTML(q) {
   const examType = q ? q.examType : '會試';
   const stocks = q ? q.stocks : [{ seq: 1, code: '', duke: '', year: '', text: '', abbrev: '' }];
 
+  const examTypes = ['會試','應天鄉試','順天鄉試','浙江鄉試','江西鄉試','福建鄉試','湖廣鄉試','河南鄉試','山東鄉試','山西鄉試','陝西鄉試','四川鄉試','廣東鄉試','廣西鄉試','雲貴鄉試','雲南鄉試','貴州鄉試'];
   let html = `<h2>${title}</h2>`;
   html += `<div class="form-row">
     <div class="form-group"><label>考試類別</label>
-      <select id="f-examType"><option ${examType==='會試'?'selected':''}>會試</option><option ${examType==='應天鄉試'?'selected':''}>應天鄉試</option><option ${examType==='順天鄉試'?'selected':''}>順天鄉試</option></select>
+      <select id="f-examType">${examTypes.map(t => `<option ${examType===t?'selected':''}>${t}</option>`).join('')}</select>
     </div>
     <div class="form-group"><label>試年</label><input id="f-examYear" value="${esc(q?q.examYear:'')}" placeholder="如：嘉靖二十年"></div>
     <div class="form-group"><label>科次</label><input id="f-session" type="number" value="${q?q.session||'':''}"></div>
@@ -471,8 +494,8 @@ function buildFormHTML(q) {
 function stockFieldHTML(idx, s) {
   return `<div class="stock-editor" id="stock-${idx}">
     <div class="stock-header"><span>第 ${idx + 1} 股</span><button class="remove-stock" onclick="removeStockField(${idx})">移除</button></div>
+    <input type="hidden" class="sf-code" value="${esc(s.code||'')}">
     <div class="form-row">
-      <div class="form-group"><label>代碼</label><input class="sf-code" value="${esc(s.code||'')}" placeholder="如 e-28-8"></div>
       <div class="form-group"><label>時代</label>
         <select class="sf-duke">
           <option value="">--</option>
@@ -631,7 +654,7 @@ function closeModal() { document.getElementById('modal-overlay').classList.remov
 document.getElementById('modal-overlay').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 document.getElementById('search').addEventListener('input', debounce(applyFilters, 300));
-['filter-type','filter-duke','filter-stocks'].forEach(id => document.getElementById(id).addEventListener('change', applyFilters));
+['filter-type','filter-duke'].forEach(id => document.getElementById(id).addEventListener('change', applyFilters));
 document.querySelectorAll('thead th[data-sort]').forEach(th => {
   th.addEventListener('click', () => {
     const key = th.dataset.sort;
