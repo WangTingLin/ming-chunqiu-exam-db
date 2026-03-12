@@ -212,6 +212,7 @@ footer { text-align: center; padding: 1.5rem; color: var(--text-light); font-siz
     <button class="btn" onclick="exportCSV()">匯出 CSV</button>
     <button class="btn" onclick="importJSON()">匯入 JSON</button>
     <input type="file" id="import-file" accept=".json" style="display:none" onchange="handleImport(event)">
+    <button class="btn btn-success" id="sync-btn" onclick="syncToGitHub()" style="display:none">⬆ 同步到 GitHub</button>
     <span class="unsaved-badge" id="unsaved-badge">有未儲存的變更</span>
   </div>
 
@@ -650,6 +651,100 @@ function handleImport(e) {
 
 function closeModal() { document.getElementById('modal-overlay').classList.remove('show'); }
 
+// ===== GitHub Sync =====
+const GH_REPO = 'WangTingLin/ming-chunqiu-exam-db';
+const GH_FILE = 'data.json';
+
+function getGHToken() { return localStorage.getItem('gh_token'); }
+function setGHToken(t) { localStorage.setItem('gh_token', t); }
+
+function initSyncBtn() {
+  const token = getGHToken();
+  const btn = document.getElementById('sync-btn');
+  if (token) {
+    btn.style.display = '';
+  } else {
+    // Show setup button instead
+    btn.style.display = '';
+    btn.textContent = '⚙ 設定 GitHub 同步';
+    btn.onclick = setupGitHub;
+  }
+}
+
+function setupGitHub() {
+  const modal = document.getElementById('modal-content');
+  let html = `<h2>設定 GitHub 同步</h2>`;
+  html += `<p style="margin-bottom:1rem;line-height:1.8">設定後，您可以一鍵把修改存回 GitHub，網站會自動更新。</p>`;
+  html += `<p style="margin-bottom:0.5rem;font-size:0.85rem;color:var(--text-light)">請到 <a href="https://github.com/settings/tokens/new?scopes=repo&description=春秋義資料庫" target="_blank" style="color:var(--primary)">GitHub 建立 Token</a>（勾選 repo 權限），然後貼到下方：</p>`;
+  html += `<div class="form-group"><label>GitHub Personal Access Token</label><input id="gh-token-input" type="password" placeholder="ghp_xxxxxxxxxxxx"></div>`;
+  html += `<div class="form-actions">
+    <button class="btn" onclick="closeModal()">取消</button>
+    <button class="btn btn-primary" onclick="saveGHToken()">儲存</button>
+  </div>`;
+  modal.innerHTML = html;
+  document.getElementById('modal-overlay').classList.add('show');
+}
+
+function saveGHToken() {
+  const token = document.getElementById('gh-token-input').value.trim();
+  if (!token) { toast('請輸入 Token'); return; }
+  setGHToken(token);
+  closeModal();
+  const btn = document.getElementById('sync-btn');
+  btn.textContent = '⬆ 同步到 GitHub';
+  btn.onclick = syncToGitHub;
+  toast('GitHub 同步已設定完成！');
+}
+
+async function syncToGitHub() {
+  const token = getGHToken();
+  if (!token) { setupGitHub(); return; }
+
+  const btn = document.getElementById('sync-btn');
+  const origText = btn.textContent;
+  btn.textContent = '同步中...';
+  btn.disabled = true;
+
+  try {
+    // Get current file SHA (required for update)
+    const getResp = await fetch(`https://api.github.com/repos/${GH_REPO}/contents/${GH_FILE}`, {
+      headers: { 'Authorization': `token ${token}`, 'Accept': 'application/vnd.github.v3+json' }
+    });
+    if (getResp.status === 401) { toast('Token 無效，請重新設定'); setGHToken(''); setupGitHub(); return; }
+    const fileData = await getResp.json();
+    const sha = fileData.sha;
+
+    // Prepare clean data
+    const clean = DATA.map(q => { const c = {...q}; delete c._edited; return c; });
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(clean, null, 2))));
+
+    // Update file via GitHub API
+    const putResp = await fetch(`https://api.github.com/repos/${GH_REPO}/contents/${GH_FILE}`, {
+      method: 'PUT',
+      headers: { 'Authorization': `token ${token}`, 'Content-Type': 'application/json', 'Accept': 'application/vnd.github.v3+json' },
+      body: JSON.stringify({ message: '更新題目資料', content: content, sha: sha })
+    });
+
+    if (putResp.ok) {
+      // Clear edited flags
+      DATA.forEach(q => delete q._edited);
+      dirty = false;
+      document.getElementById('unsaved-badge').classList.remove('show');
+      saveToLocal();
+      render();
+      toast('已同步到 GitHub！網站將自動更新');
+    } else {
+      const err = await putResp.json();
+      toast('同步失敗：' + (err.message || '未知錯誤'));
+    }
+  } catch (e) {
+    toast('同步失敗：' + e.message);
+  } finally {
+    btn.textContent = origText;
+    btn.disabled = false;
+  }
+}
+
 // Events
 document.getElementById('modal-overlay').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
@@ -664,6 +759,7 @@ document.querySelectorAll('thead th[data-sort]').forEach(th => {
 });
 
 // Init
+initSyncBtn();
 const local = loadFromLocal();
 if (local && local.length > 0) {
   DATA = local;
