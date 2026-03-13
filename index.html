@@ -343,7 +343,8 @@ function updateStats() {
   }
 }
 
-function applyFilters() {
+function applyFilters(resetPage) {
+  if (resetPage === undefined) resetPage = true;
   const search = document.getElementById('search').value.trim().toLowerCase();
   const fType = document.getElementById('filter-type').value;
   const fDuke = document.getElementById('filter-duke').value;
@@ -356,7 +357,11 @@ function applyFilters() {
     }
     return true;
   });
-  applySort(); currentPage = 1; render();
+  applySort();
+  if (resetPage) currentPage = 1;
+  const tp = Math.ceil(filtered.length / PAGE_SIZE);
+  if (currentPage > tp) currentPage = tp || 1;
+  render();
 }
 
 function applySort() {
@@ -593,7 +598,7 @@ function saveForm() {
 
   markDirty();
   updateStats();
-  applyFilters();
+  applyFilters(false);
   closeModal();
 }
 
@@ -602,7 +607,7 @@ function deleteQuestion(id) {
   if (!q) return;
   if (!confirm(`確定要刪除「${q.examYear} ${q.examType} 第${q.questionSeq}題」？`)) return;
   DATA = DATA.filter(x => x.id !== id);
-  markDirty(); updateStats(); applyFilters();
+  markDirty(); updateStats(); applyFilters(false);
   toast('已刪除題目 #' + id);
 }
 
