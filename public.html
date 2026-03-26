@@ -4,200 +4,280 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>明代鄉會試《春秋》義題目資料庫</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --primary: #6366f1;
-  --primary-light: #818cf8;
-  --bg: #1a1b2e;
-  --bg-elevated: #1e1f3b;
-  --card-bg: #242540;
-  --border: #2e3150;
-  --border-light: #3a3d5c;
-  --text: #e2e8f0;
-  --text-light: #94a3b8;
-  --text-muted: #64748b;
-  --accent: #f87171;
-  --tag-hui: #6366f1;
-  --tag-ying: #10b981;
-  --tag-shun: #f59e0b;
-  --hover: #2a2c4a;
-  --input-bg: #1a1b2e;
-  --glow: rgba(99, 102, 241, 0.3);
+  --bg: #f4f7f5;
+  --bg-card: #ffffff;
+  --bg-elevated: #f0f5f2;
+  --bg-hover: #e8f0eb;
+  --border: #d4ddd8;
+  --border-light: #e2ebe6;
+  --text: #1a2e23;
+  --text-sec: #4a6355;
+  --text-dim: #8a9e92;
+  --accent: #2d8a56;
+  --accent-light: #3aaa6b;
+  --accent-dark: #1e6b3f;
+  --accent-glow: rgba(45,138,86,0.15);
+  --accent-bg: rgba(45,138,86,0.06);
+  --indigo: #5b6abf;
+  --amber: #d4950a;
+  --rose: #c94a5e;
+  --sky: #3a8fc2;
+  --orange: #c67320;
+  --pink: #b5508a;
+  --teal: #28917a;
+  --red: #c93d3d;
+  --radius: 14px;
+  --radius-sm: 8px;
+  --shadow-sm: 0 1px 3px rgba(30,60,40,0.06);
+  --shadow-md: 0 4px 16px rgba(30,60,40,0.08);
+  --shadow-lg: 0 8px 32px rgba(30,60,40,0.12);
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-  font-family: "Noto Sans TC", "Source Han Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.8;
+body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; min-height: 100vh; }
+
+/* ===== HERO HEADER ===== */
+.hero {
+  position: relative; padding: 3rem 1.5rem 4.5rem; text-align: center;
+  background: linear-gradient(160deg, #1e6b3f 0%, #2d8a56 40%, #3aaa6b 100%);
+  overflow: hidden;
 }
-header {
-  background: linear-gradient(135deg, #1e1f3b 0%, #0f1029 100%);
-  color: #e2e8f0;
-  padding: 2.5rem 1rem 2rem;
-  text-align: center;
-  border-bottom: 1px solid var(--border);
-  position: relative; overflow: hidden;
-}
-header::before {
+.hero::before {
   content: ''; position: absolute; inset: 0;
-  background: radial-gradient(ellipse at 50% 0%, rgba(99,102,241,0.15) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.12) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 80%, rgba(0,0,0,0.08) 0%, transparent 50%);
   pointer-events: none;
 }
-header h1 { font-size: 1.8rem; font-weight: 700; letter-spacing: 0.15em; margin-bottom: 0.3rem; position: relative; }
-header p { font-size: 0.9rem; opacity: 0.6; letter-spacing: 0.05em; position: relative; font-weight: 300; }
-.container { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem; }
+.hero::after {
+  content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 40px;
+  background: var(--bg); border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+.hero h1 {
+  position: relative; font-size: 2rem; font-weight: 700; letter-spacing: 0.12em;
+  color: #fff; text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.hero .subtitle { position: relative; font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-top: 0.4rem; letter-spacing: 0.08em; font-weight: 300; }
+.hero .total-badge {
+  position: relative; display: inline-flex; align-items: center; gap: 0.5rem;
+  margin-top: 0.6rem; padding: 0.5rem 1.5rem; border-radius: 50px;
+  background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.25);
+  font-size: 0.9rem; color: rgba(255,255,255,0.9); backdrop-filter: blur(4px);
+}
+.hero .total-badge .big { font-size: 1.4rem; font-weight: 700; color: #fff; }
 
-/* Stats */
-.stats-bar { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
-.stat-card {
-  flex: 1; min-width: 120px; background: var(--card-bg); border: 1px solid var(--border);
-  border-radius: 12px; padding: 1rem; text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2); transition: transform 0.15s, box-shadow 0.15s;
-  border-top: 3px solid var(--primary);
+/* ===== STATS CHIPS ===== */
+.stats-scroll { padding: 1.2rem 1rem 0.6rem; overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; }
+.stats-scroll::-webkit-scrollbar { display: none; }
+.stat-chip {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.5rem 1rem; margin-right: 0.5rem; border-radius: 50px;
+  background: var(--bg-card); border: 1px solid var(--border-light);
+  font-size: 0.82rem; color: var(--text-sec); cursor: pointer;
+  transition: all 0.2s; white-space: nowrap; box-shadow: var(--shadow-sm);
 }
-.stat-card:nth-child(2) { border-top-color: var(--tag-hui); }
-.stat-card:nth-child(3) { border-top-color: var(--tag-ying); }
-.stat-card:nth-child(4) { border-top-color: var(--tag-shun); }
-.stat-card:nth-child(5) { border-top-color: #ec4899; }
-.stat-card:nth-child(6) { border-top-color: #06b6d4; }
-.stat-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.3); }
-.stat-card .num { font-size: 1.6rem; font-weight: 700; color: var(--text); }
-.stat-card .label { font-size: 0.78rem; color: var(--text-muted); margin-top: 0.1rem; }
+.stat-chip:hover { border-color: var(--accent); color: var(--accent); }
+.stat-chip.active { background: var(--accent); color: #fff; border-color: var(--accent); box-shadow: 0 2px 8px var(--accent-glow); }
+.stat-chip .chip-num { font-weight: 700; color: var(--text); font-size: 0.9rem; }
+.stat-chip.active .chip-num { color: #fff; }
+.stat-chip .chip-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
 
-/* Controls */
-.controls {
-  background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px;
-  padding: 1rem 1.2rem; margin-bottom: 1.5rem;
-  display: flex; flex-wrap: wrap; gap: 0.8rem; align-items: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+/* ===== MAIN CONTAINER ===== */
+.container { max-width: 1260px; margin: 0 auto; padding: 0 1rem 3rem; }
+
+/* ===== SEARCH & FILTERS ===== */
+.search-bar {
+  position: relative; margin-bottom: 1.2rem;
+  background: var(--bg-card); border: 1px solid var(--border-light); border-radius: var(--radius);
+  padding: 0.8rem 1rem; display: flex; flex-wrap: wrap; gap: 0.7rem; align-items: center;
+  transition: all 0.2s; box-shadow: var(--shadow-sm);
 }
-.search-box { flex: 1; min-width: 200px; position: relative; }
-.search-box input {
-  width: 100%; padding: 0.6rem 0.8rem 0.6rem 2.2rem;
-  border: 1px solid var(--border); border-radius: 8px; font-size: 0.95rem;
-  font-family: inherit; outline: none; transition: all 0.2s;
-  background: var(--input-bg); color: var(--text);
+.search-bar:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-glow), var(--shadow-sm); }
+.search-input-wrap { flex: 1; min-width: 200px; position: relative; }
+.search-input-wrap input {
+  width: 100%; background: transparent; border: none; color: var(--text);
+  font-size: 0.95rem; font-family: inherit; outline: none; padding: 0.3rem 0 0.3rem 1.8rem;
 }
-.search-box input::placeholder { color: var(--text-muted); }
-.search-box input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px var(--glow); }
-.search-box::before { content: "\1F50D"; position: absolute; left: 0.7rem; top: 50%; transform: translateY(-50%); font-size: 0.9rem; }
-select {
-  padding: 0.6rem 0.8rem; border: 1px solid var(--border); border-radius: 8px;
-  font-size: 0.9rem; font-family: inherit; background: var(--input-bg); color: var(--text);
+.search-input-wrap input::placeholder { color: var(--text-dim); }
+.search-input-wrap .search-icon { position: absolute; left: 0; top: 50%; transform: translateY(-50%); color: var(--text-dim); font-size: 1.1rem; }
+.filter-select {
+  background: var(--bg-elevated); border: 1px solid var(--border); color: var(--text-sec);
+  padding: 0.4rem 0.7rem; border-radius: 50px; font-size: 0.82rem; font-family: inherit;
   cursor: pointer; outline: none; transition: all 0.2s;
 }
-select:focus { border-color: var(--primary); box-shadow: 0 0 0 3px var(--glow); }
-select option { background: var(--card-bg); color: var(--text); }
-.result-count { font-size: 0.85rem; color: var(--text-muted); white-space: nowrap; }
+.filter-select:focus { border-color: var(--accent); }
+.filter-select option { background: var(--bg-card); color: var(--text); }
+.result-count { font-size: 0.8rem; color: var(--text-dim); white-space: nowrap; }
 
-/* Table */
-.table-wrap {
-  background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px;
-  overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+/* ===== SORT BAR ===== */
+.sort-bar { display: flex; align-items: center; gap: 0.4rem; margin-bottom: 1rem; padding: 0 0.2rem; flex-wrap: wrap; }
+.sort-bar .label { font-size: 0.78rem; color: var(--text-dim); margin-right: 0.2rem; }
+.sort-btn {
+  padding: 0.3rem 0.7rem; border-radius: 50px; border: 1px solid transparent;
+  background: transparent; color: var(--text-dim); font-size: 0.78rem; font-family: inherit;
+  cursor: pointer; transition: all 0.15s;
 }
-.table-wrap { overflow-x: auto; }
-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
-thead th {
-  background: var(--bg-elevated); color: var(--text-light); padding: 0.8rem 0.6rem; font-weight: 600;
-  white-space: nowrap; position: sticky; top: 0; z-index: 10; cursor: pointer; user-select: none;
-  border-bottom: 1px solid var(--border); text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.05em;
+.sort-btn:hover { color: var(--text-sec); background: var(--bg-elevated); }
+.sort-btn.active { background: var(--accent-bg); color: var(--accent); border-color: var(--border); font-weight: 600; }
+
+/* ===== GROUP / CARD GRID ===== */
+.exam-group { margin-bottom: 1rem; }
+.group-header {
+  display: flex; align-items: center; gap: 0.6rem; padding: 0.6rem 1rem;
+  background: var(--bg-card); border: 1px solid var(--border-light); border-radius: var(--radius);
+  cursor: pointer; user-select: none; transition: all 0.2s; box-shadow: var(--shadow-sm);
 }
-thead th:hover { color: var(--primary-light); background: var(--hover); }
-tbody tr { border-bottom: 1px solid var(--border); transition: background 0.15s; cursor: pointer; }
-tbody tr:hover { background: var(--hover); }
-tbody td { padding: 0.7rem 0.6rem; vertical-align: top; }
-td.center { text-align: center; }
+.group-header:hover { border-color: var(--accent); }
+.group-header .group-arrow {
+  font-size: 0.7rem; color: var(--text-dim); transition: transform 0.2s; flex-shrink: 0;
+}
+.group-header.collapsed .group-arrow { transform: rotate(-90deg); }
+.group-header .group-title { font-weight: 600; font-size: 0.95rem; color: var(--text); }
+.group-header .group-count {
+  font-size: 0.75rem; color: var(--text-dim); background: var(--bg-elevated);
+  padding: 0.1rem 0.5rem; border-radius: 50px; margin-left: auto;
+}
+.group-body {
+  display: flex; flex-wrap: wrap; gap: 0.6rem;
+  margin-top: 0.6rem;
+  max-height: 2000px; overflow: hidden; transition: max-height 0.3s ease, margin 0.3s ease, opacity 0.3s ease; opacity: 1;
+}
+.group-body .q-card { flex: 1 1 220px; max-width: calc(25% - 0.5rem); min-width: 200px; }
+.group-body.collapsed { max-height: 0; margin-top: 0; opacity: 0; }
+.card-grid { display: flex; flex-direction: column; gap: 0; }
+@media (max-width: 900px) { .group-body .q-card { max-width: calc(50% - 0.3rem); } }
+@media (max-width: 520px) { .group-body .q-card { max-width: 100%; } }
+
+.q-card {
+  background: var(--bg-card); border: 1px solid var(--border-light); border-radius: var(--radius);
+  padding: 1.1rem 1.2rem; cursor: pointer; position: relative;
+  transition: all 0.2s ease; overflow: hidden; box-shadow: var(--shadow-sm);
+}
+.q-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  opacity: 0; transition: opacity 0.2s;
+}
+.q-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.q-card:hover::before { opacity: 1; }
+.q-card.type-hui::before { background: linear-gradient(90deg, var(--indigo), var(--sky)); }
+.q-card.type-ying::before { background: linear-gradient(90deg, var(--accent), var(--teal)); }
+.q-card.type-shun::before { background: linear-gradient(90deg, var(--amber), var(--orange)); }
+.q-card.type-other::before { background: linear-gradient(90deg, var(--pink), var(--rose)); }
+
+.q-card-head { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.6rem; }
+.q-card-meta { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+.q-card-year { font-size: 1.05rem; font-weight: 600; color: var(--text); }
+.q-card-seq { font-size: 0.75rem; color: var(--text-dim); background: var(--bg-elevated); padding: 0.15rem 0.5rem; border-radius: 50px; }
+.q-card-source { font-size: 0.72rem; color: var(--text-dim); margin-bottom: 0.3rem; }
 
 .tag {
-  display: inline-block; padding: 0.2rem 0.6rem; border-radius: 6px;
-  font-size: 0.75rem; font-weight: 600; color: #fff; white-space: nowrap; letter-spacing: 0.02em;
+  display: inline-block; padding: 0.15rem 0.6rem; border-radius: 50px;
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.02em; white-space: nowrap;
 }
-.tag-hui { background: var(--tag-hui); }
-.tag-ying { background: var(--tag-ying); }
-.tag-shun { background: var(--tag-shun); color: #1a1b2e; }
+.tag-hui { background: rgba(91,106,191,0.1); color: var(--indigo); }
+.tag-ying { background: rgba(45,138,86,0.1); color: var(--accent); }
+.tag-shun { background: rgba(212,149,10,0.1); color: var(--amber); }
+.tag-other { background: rgba(181,80,138,0.1); color: var(--pink); }
 
-.stock-list { display: flex; flex-direction: column; gap: 0.25rem; }
-.stock-item { display: flex; gap: 0.4rem; align-items: baseline; line-height: 1.5; }
-.stock-duke { font-size: 0.8rem; color: var(--accent); white-space: nowrap; font-weight: 500; }
-.stock-text { font-size: 0.88rem; color: var(--text); }
+.q-card-stocks { display: flex; flex-direction: column; gap: 0.3rem; }
+.stock-line { display: flex; gap: 0.4rem; align-items: baseline; line-height: 1.5; }
+.stock-duke { font-size: 0.75rem; color: var(--rose); font-weight: 500; white-space: nowrap; padding: 0.05rem 0.35rem; background: rgba(201,74,94,0.06); border-radius: 4px; }
+.stock-txt { font-size: 0.85rem; color: var(--text-sec); }
+.stock-more { font-size: 0.75rem; color: var(--text-dim); padding-left: 0.3rem; }
 
-/* Pagination */
-.pagination { display: flex; justify-content: center; align-items: center; gap: 0.4rem; margin-top: 1.2rem; flex-wrap: wrap; }
+/* ===== PAGINATION ===== */
+.pagination { display: flex; justify-content: center; align-items: center; gap: 0.3rem; margin-top: 1.5rem; flex-wrap: wrap; }
 .pagination button {
-  padding: 0.4rem 0.8rem; border: 1px solid var(--border); border-radius: 20px;
-  background: var(--card-bg); color: var(--text-light); cursor: pointer; font-family: inherit;
-  font-size: 0.85rem; transition: all 0.15s;
+  width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--border);
+  background: var(--bg-card); color: var(--text-sec); cursor: pointer; font-family: inherit;
+  font-size: 0.82rem; transition: all 0.15s; display: flex; align-items: center; justify-content: center;
+  box-shadow: var(--shadow-sm);
 }
-.pagination button:hover:not(:disabled) { background: var(--hover); border-color: var(--primary); color: var(--primary-light); }
+.pagination button:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
 .pagination button:disabled { opacity: 0.3; cursor: default; }
-.pagination button.active { background: var(--primary); color: #fff; border-color: var(--primary); box-shadow: 0 0 8px var(--glow); }
-.pagination .page-info { font-size: 0.85rem; color: var(--text-muted); }
+.pagination button.active { background: var(--accent); color: #fff; border-color: var(--accent); box-shadow: 0 2px 8px var(--accent-glow); }
+.pagination .page-info { font-size: 0.78rem; color: var(--text-dim); margin: 0 0.3rem; }
 
-/* Modal */
+/* ===== MODAL ===== */
 .modal-overlay {
-  display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
-  z-index: 100; justify-content: center; align-items: flex-start; padding: 2rem 1rem; overflow-y: auto;
+  display: none; position: fixed; inset: 0; background: rgba(30,60,40,0.3);
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  z-index: 100; justify-content: center; align-items: flex-start; padding: 3vh 1rem; overflow-y: auto;
 }
 .modal-overlay.show { display: flex; }
 .modal {
-  background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px;
-  max-width: 750px; width: 100%; padding: 1.5rem; margin: auto;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  background: var(--bg-card); border: 1px solid var(--border-light); border-radius: 18px;
+  max-width: 720px; width: 100%; padding: 1.8rem; margin: auto;
+  box-shadow: var(--shadow-lg); animation: modalIn 0.25s ease;
 }
-.modal h2 { font-size: 1.15rem; color: var(--primary-light); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
-
-.detail-meta span { display: inline-block; margin-right: 1rem; font-size: 0.9rem; }
-.detail-meta .key { color: var(--text-muted); }
-.stock-detail-row { display: flex; gap: 0.6rem; padding: 0.6rem 0; border-bottom: 1px solid var(--border); align-items: baseline; }
+@keyframes modalIn { from { opacity:0; transform:translateY(20px) scale(0.97); } to { opacity:1; transform:none; } }
+.modal h2 { font-size: 1.15rem; color: var(--accent-dark); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--border-light); }
+.detail-meta { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 1.2rem; }
+.detail-meta span { font-size: 0.88rem; }
+.detail-meta .key { color: var(--text-dim); }
+.stock-detail-row { display: flex; gap: 0.8rem; padding: 0.7rem 0; border-bottom: 1px solid var(--border-light); align-items: baseline; }
 .stock-detail-row:last-child { border-bottom: none; }
-.stock-num { font-size: 0.85rem; color: var(--accent); font-weight: 600; white-space: nowrap; }
+.stock-num { font-size: 0.8rem; color: var(--rose); font-weight: 600; white-space: nowrap; min-width: 3rem; }
 .stock-info { flex: 1; }
-.stock-info .code-line { font-size: 0.8rem; color: var(--text-muted); }
-.stock-info .text-line { font-size: 1rem; margin-top: 0.2rem; color: var(--text); }
+.stock-info .code-line { font-size: 0.78rem; color: var(--text-dim); margin-bottom: 0.15rem; }
+.stock-info .text-line { font-size: 1rem; color: var(--text); line-height: 1.8; }
 
+/* ===== DETAIL ACTIONS ===== */
+.detail-actions { display: flex; gap: 0.5rem; justify-content: flex-end; margin-top: 1.2rem; padding-top: 0.8rem; border-top: 1px solid var(--border-light); }
 .btn {
-  padding: 0.5rem 1rem; border: 1px solid var(--border); border-radius: 8px;
-  background: var(--card-bg); color: var(--text); cursor: pointer; font-family: inherit; font-size: 0.85rem;
-  transition: all 0.15s;
+  padding: 0.5rem 1.1rem; border-radius: var(--radius-sm); border: 1px solid var(--border);
+  background: var(--bg-card); color: var(--text-sec); font-size: 0.85rem; font-family: inherit;
+  cursor: pointer; transition: all 0.15s; display: inline-flex; align-items: center; gap: 0.3rem;
 }
-.btn:hover { background: var(--hover); border-color: var(--primary); color: var(--primary-light); }
-.form-actions { display: flex; gap: 0.6rem; justify-content: flex-end; margin-top: 1.2rem; padding-top: 0.8rem; border-top: 1px solid var(--border); }
+.btn:hover { border-color: var(--accent); color: var(--accent); }
 
-footer { text-align: center; padding: 1.5rem; color: var(--text-muted); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+/* ===== TOAST ===== */
+.toast {
+  position: fixed; bottom: 1.5rem; right: 1.5rem; padding: 0.7rem 1.3rem;
+  background: var(--accent); color: #fff; border-radius: 50px; font-size: 0.88rem;
+  z-index: 200; opacity: 0; transform: translateY(10px);
+  transition: all 0.3s; box-shadow: 0 4px 16px var(--accent-glow);
+}
+.toast.show { opacity: 1; transform: none; }
 
-/* Scrollbar */
-::-webkit-scrollbar { width: 8px; height: 8px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+/* ===== FOOTER ===== */
+footer { text-align: center; padding: 2rem 1rem; color: var(--text-dim); font-size: 0.78rem; border-top: 1px solid var(--border-light); }
 
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-dim); }
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  header h1 { font-size: 1.3rem; }
-  .controls { flex-direction: column; }
-  .search-box { min-width: 100%; }
-  table { font-size: 0.82rem; }
+  .hero h1 { font-size: 1.4rem; }
+  .card-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .card-grid { grid-template-columns: 1fr; gap: 0.6rem; }
+  .q-card { padding: 0.9rem 1rem; }
 }
 </style>
 </head>
 <body>
 
-<header>
+<div class="hero">
   <h1>明代鄉會試《春秋》義題目資料庫</h1>
-  <p>Ming Dynasty Civil Examination Spring and Autumn Annals Question Database</p>
-</header>
+  <div class="subtitle">Ming Dynasty Provincial & Metropolitan Examination — Chunqiu</div>
+  <div class="total-badge"><span class="big" id="stat-total">-</span> 筆題目</div>
+</div>
+
+<div class="stats-scroll" id="stats-bar"></div>
 
 <div class="container">
-  <div class="stats-bar" id="stats-bar">
-    <div class="stat-card"><div class="num" id="stat-total">-</div><div class="label">題目總數</div></div>
-  </div>
-
-  <div class="controls">
-    <div class="search-box">
-      <input type="text" id="search" placeholder="搜尋經文、試年、經年...">
+  <div class="search-bar">
+    <div class="search-input-wrap">
+      <span class="search-icon">&#x1F50D;</span>
+      <input type="text" id="search" placeholder="搜尋經文、試年、出處...">
     </div>
-    <select id="filter-type">
+    <select class="filter-select" id="filter-type">
       <option value="">全部考試</option>
       <option value="會試">會試</option>
       <option value="應天鄉試">應天鄉試</option>
@@ -217,7 +297,7 @@ footer { text-align: center; padding: 1.5rem; color: var(--text-muted); font-siz
       <option value="雲南鄉試">雲南鄉試</option>
       <option value="貴州鄉試">貴州鄉試</option>
     </select>
-    <select id="filter-duke">
+    <select class="filter-select" id="filter-duke">
       <option value="">全部時代</option>
       <option value="隱公">隱公</option><option value="桓公">桓公</option>
       <option value="莊公">莊公</option><option value="閔公">閔公</option>
@@ -229,28 +309,23 @@ footer { text-align: center; padding: 1.5rem; color: var(--text-muted); font-siz
     <span class="result-count" id="result-count"></span>
   </div>
 
-  <div class="table-wrap">
-    <table>
-      <thead>
-        <tr>
-          <th data-sort="id" style="width:45px">#</th>
-          <th data-sort="examType" style="width:85px">考試</th>
-          <th data-sort="examYear" style="width:105px">試年</th>
-          <th data-sort="questionSeq" style="width:45px">題次</th>
-          <th data-sort="stockCount" style="width:45px">股數</th>
-          <th>題目內容</th>
-        </tr>
-      </thead>
-      <tbody id="table-body"></tbody>
-    </table>
+  <div class="sort-bar">
+    <span class="label">排序</span>
+    <button class="sort-btn active" data-sort="id">編號</button>
+    <button class="sort-btn" data-sort="examType">考試</button>
+    <button class="sort-btn" data-sort="examYear">試年</button>
+    <button class="sort-btn" data-sort="questionSeq">題次</button>
+    <button class="sort-btn" data-sort="stockCount">股數</button>
   </div>
+
+  <div class="card-grid" id="card-grid"></div>
   <div class="pagination" id="pagination"></div>
 </div>
 
 <div class="modal-overlay" id="modal-overlay">
   <div class="modal" id="modal-content"></div>
 </div>
-
+<div class="toast" id="toast"></div>
 <footer>明代鄉會試《春秋》義題目資料庫</footer>
 
 <script>
@@ -258,49 +333,73 @@ let DATA = [];
 let filtered = [];
 let sortKey = 'id';
 let sortAsc = true;
-const PAGE_SIZE = 30;
+const PAGE_SIZE = 60;
 let currentPage = 1;
 
 const dynastyOrder = {'洪武':1,'建文':2,'永樂':3,'洪熙':4,'宣德':5,'正統':6,'景泰':7,'天順':8,'成化':9,'弘治':10,'正德':11,'嘉靖':12,'隆慶':13,'萬曆':14,'泰昌':15,'天啟':16,'崇禎':17};
 const cnNums = {'元':1,'一':1,'二':2,'三':3,'四':4,'五':5,'六':6,'七':7,'八':8,'九':9,'十':10,'十一':11,'十二':12,'十三':13,'十四':14,'十五':15,'十六':16,'十七':17,'十八':18,'十九':19,'二十':20,'二十一':21,'二十二':22,'二十三':23,'二十四':24,'二十五':25,'二十六':26,'二十七':27,'二十八':28,'二十九':29,'三十':30,'三十一':31,'三十二':32,'三十三':33,'三十四':34,'三十五':35,'三十六':36,'三十七':37,'三十八':38,'四十':40,'四十一':41,'四十二':42,'四十三':43,'四十四':44,'四十五':45,'四十六':46,'四十七':47,'四十八':48};
 
+const typeColors = {
+  '會試': {tag:'tag-hui', card:'type-hui', dot:'var(--indigo)'},
+  '應天鄉試': {tag:'tag-ying', card:'type-ying', dot:'var(--accent)'},
+  '順天鄉試': {tag:'tag-shun', card:'type-shun', dot:'var(--amber)'},
+};
+function getTypeStyle(t) { return typeColors[t] || {tag:'tag-other', card:'type-other', dot:'var(--pink)'}; }
+
 function yearToNum(y) {
   if (!y) return 9999;
   for (const [prefix, ord] of Object.entries(dynastyOrder)) {
-    if (y.startsWith(prefix)) { return ord * 100 + (cnNums[y.slice(prefix.length).replace('年','')] || 0); }
+    if (y.startsWith(prefix)) return ord * 100 + (cnNums[y.slice(prefix.length).replace('年','')] || 0);
   }
   return 9999;
 }
-function tagClass(t) { return t === '會試' ? 'tag-hui' : t === '應天鄉試' ? 'tag-ying' : 'tag-shun'; }
 function esc(s) { return s ? s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') : ''; }
 function debounce(fn, d) { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), d); }; }
+function toast(msg) { const el = document.getElementById('toast'); el.textContent = msg; el.classList.add('show'); setTimeout(() => el.classList.remove('show'), 2200); }
 
 function updateStats() {
   document.getElementById('stat-total').textContent = DATA.length;
   const bar = document.getElementById('stats-bar');
-  while (bar.children.length > 1) bar.removeChild(bar.lastChild);
+  bar.innerHTML = '';
   const counts = {};
   DATA.forEach(q => { counts[q.examType] = (counts[q.examType]||0) + 1; });
   const order = ['會試','應天鄉試','順天鄉試','浙江鄉試','江西鄉試','福建鄉試','湖廣鄉試','河南鄉試','山東鄉試','山西鄉試','陝西鄉試','四川鄉試','廣東鄉試','廣西鄉試','雲貴鄉試','雲南鄉試','貴州鄉試'];
+  const allChip = document.createElement('div');
+  allChip.className = 'stat-chip active';
+  allChip.innerHTML = `<span class="chip-num">${DATA.length}</span> 全部`;
+  allChip.onclick = () => { document.getElementById('filter-type').value = ''; applyFilters(); updateChipActive(''); };
+  bar.appendChild(allChip);
   for (const t of order) {
-    if (counts[t]) {
-      const card = document.createElement('div');
-      card.className = 'stat-card';
-      card.innerHTML = `<div class="num">${counts[t]}</div><div class="label">${t}</div>`;
-      bar.appendChild(card);
-    }
+    if (!counts[t]) continue;
+    const style = getTypeStyle(t);
+    const chip = document.createElement('div');
+    chip.className = 'stat-chip';
+    chip.dataset.type = t;
+    chip.innerHTML = `<span class="chip-dot" style="background:${style.dot}"></span><span class="chip-num">${counts[t]}</span> ${t}`;
+    chip.onclick = () => { document.getElementById('filter-type').value = t; applyFilters(); updateChipActive(t); };
+    bar.appendChild(chip);
   }
   for (const [t, c] of Object.entries(counts)) {
     if (!order.includes(t)) {
-      const card = document.createElement('div');
-      card.className = 'stat-card';
-      card.innerHTML = `<div class="num">${c}</div><div class="label">${t}</div>`;
-      bar.appendChild(card);
+      const style = getTypeStyle(t);
+      const chip = document.createElement('div');
+      chip.className = 'stat-chip';
+      chip.dataset.type = t;
+      chip.innerHTML = `<span class="chip-dot" style="background:${style.dot}"></span><span class="chip-num">${c}</span> ${t}`;
+      chip.onclick = () => { document.getElementById('filter-type').value = t; applyFilters(); updateChipActive(t); };
+      bar.appendChild(chip);
     }
   }
 }
 
-function applyFilters() {
+function updateChipActive(type) {
+  document.querySelectorAll('.stat-chip').forEach(c => {
+    c.classList.toggle('active', type === '' ? !c.dataset.type : c.dataset.type === type);
+  });
+}
+
+function applyFilters(resetPage) {
+  if (resetPage === undefined) resetPage = true;
   const search = document.getElementById('search').value.trim().toLowerCase();
   const fType = document.getElementById('filter-type').value;
   const fDuke = document.getElementById('filter-duke').value;
@@ -308,12 +407,16 @@ function applyFilters() {
     if (fType && q.examType !== fType) return false;
     if (fDuke && !q.stocks.some(s => s.duke === fDuke)) return false;
     if (search) {
-      const hay = (q.examYear + ' ' + q.fullText + ' ' + (q.source||'') + ' ' + q.stocks.map(s => (s.duke||'') + (s.year||'') + (s.text||'')).join(' ')).toLowerCase();
+      const hay = (q.examYear + ' ' + q.fullText + ' ' + (q.source||'') + ' ' + q.stocks.map(s => (s.duke||'') + (s.year||'') + (s.text||'') + (s.code||'')).join(' ')).toLowerCase();
       if (!hay.includes(search)) return false;
     }
     return true;
   });
-  applySort(); currentPage = 1; render();
+  applySort();
+  if (resetPage) currentPage = 1;
+  const tp = Math.ceil(filtered.length / PAGE_SIZE);
+  if (currentPage > tp) currentPage = tp || 1;
+  render();
 }
 
 function applySort() {
@@ -327,37 +430,73 @@ function applySort() {
   });
 }
 
-function renderStocksPreview(stocks) {
-  if (!stocks || !stocks.length) return '';
-  let html = '<div class="stock-list">';
-  const show = stocks.slice(0, 3);
-  for (const s of show) {
-    html += '<div class="stock-item">';
-    if (s.duke && s.duke !== '?') html += `<span class="stock-duke">${esc(s.duke)}${s.year !== '?' ? s.year + '年' : ''}</span>`;
+let collapsedGroups = {};
+function renderCard(q) {
+  const style = getTypeStyle(q.examType);
+  const s = q.stocks[0];
+  let preview = '';
+  if (s) {
+    const duke = (s.duke && s.duke !== '?') ? `<span class="stock-duke">${esc(s.duke)}</span>` : '';
     const txt = s.text || '';
-    html += `<span class="stock-text">${esc(txt.substring(0, 35))}${txt.length > 35 ? '...' : ''}</span></div>`;
+    const truncated = txt.length > 30 ? txt.substring(0, 30) + '…' : txt;
+    preview = `<div class="stock-line">${duke}<span class="stock-txt">${esc(truncated)}</span></div>`;
+    if (q.stocks.length > 1) preview += `<div class="stock-more">共 ${q.stockCount} 股</div>`;
   }
-  if (stocks.length > 3) html += `<div style="font-size:0.78rem;color:var(--text-light)">...及其他 ${stocks.length - 3} 股</div>`;
-  return html + '</div>';
+  return `<div class="q-card ${style.card}" onclick="showDetail(${q.id})">
+    <div class="q-card-head">
+      <div class="q-card-meta">
+        <span class="q-card-seq">第${q.questionSeq || '?'}題 / ${q.stockCount}股</span>
+      </div>
+    </div>
+    ${q.source ? `<div class="q-card-source">${esc(q.source)}</div>` : ''}
+    <div class="q-card-stocks">${preview}</div>
+  </div>`;
+}
+
+function toggleGroup(key) {
+  collapsedGroups[key] = !collapsedGroups[key];
+  const header = document.querySelector(`.group-header[data-key="${key}"]`);
+  const body = document.querySelector(`.group-body[data-key="${key}"]`);
+  if (header) header.classList.toggle('collapsed', collapsedGroups[key]);
+  if (body) body.classList.toggle('collapsed', collapsedGroups[key]);
 }
 
 function render() {
-  const tbody = document.getElementById('table-body');
+  const grid = document.getElementById('card-grid');
   const start = (currentPage - 1) * PAGE_SIZE;
   const pageData = filtered.slice(start, start + PAGE_SIZE);
-  let html = '';
+
+  // Group by examType + examYear
+  const groups = [];
+  const groupMap = {};
   for (const q of pageData) {
-    html += `<tr onclick="showDetail(${q.id})">
-      <td class="center">${q.id}</td>
-      <td class="center"><span class="tag ${tagClass(q.examType)}">${q.examType}</span></td>
-      <td class="center">${esc(q.examYear)}${q.source ? '<br><span style="font-size:0.73rem;color:var(--text-light)">(' + esc(q.source) + ')</span>' : ''}</td>
-      <td class="center">${q.questionSeq || ''}</td>
-      <td class="center">${q.stockCount}</td>
-      <td>${renderStocksPreview(q.stocks)}</td>
-    </tr>`;
+    const key = q.examType + '｜' + q.examYear;
+    if (!groupMap[key]) {
+      groupMap[key] = { key, examType: q.examType, examYear: q.examYear, items: [] };
+      groups.push(groupMap[key]);
+    }
+    groupMap[key].items.push(q);
   }
-  tbody.innerHTML = html;
-  document.getElementById('result-count').textContent = `${filtered.length} / ${DATA.length} 題`;
+
+  let html = '';
+  for (const g of groups) {
+    const style = getTypeStyle(g.examType);
+    const isCollapsed = collapsedGroups[g.key];
+    const cardsHtml = g.items.map(q => renderCard(q)).join('');
+    html += `<div class="exam-group">
+      <div class="group-header${isCollapsed ? ' collapsed' : ''}" data-key="${esc(g.key)}" onclick="toggleGroup('${g.key.replace(/'/g,"\\'")}')">
+        <span class="group-arrow">▼</span>
+        <span class="tag ${style.tag}">${g.examType}</span>
+        <span class="group-title">${esc(g.examYear)}</span>
+        <span class="group-count">${g.items.length} 題</span>
+      </div>
+      <div class="group-body${isCollapsed ? ' collapsed' : ''}" data-key="${esc(g.key)}">
+        ${cardsHtml}
+      </div>
+    </div>`;
+  }
+  grid.innerHTML = html;
+  document.getElementById('result-count').textContent = `${filtered.length} / ${DATA.length}`;
   renderPagination();
 }
 
@@ -365,7 +504,7 @@ function renderPagination() {
   const tp = Math.ceil(filtered.length / PAGE_SIZE);
   const el = document.getElementById('pagination');
   if (tp <= 1) { el.innerHTML = ''; return; }
-  let html = `<button onclick="goPage(${currentPage-1})" ${currentPage<=1?'disabled':''}>&laquo;</button>`;
+  let html = `<button onclick="goPage(${currentPage-1})" ${currentPage<=1?'disabled':''}>&#171;</button>`;
   let pages = [1]; for (let i = Math.max(2,currentPage-2); i <= Math.min(tp-1,currentPage+2); i++) pages.push(i);
   if (tp > 1) pages.push(tp); pages = [...new Set(pages)].sort((a,b)=>a-b);
   let last = 0;
@@ -373,55 +512,57 @@ function renderPagination() {
     if (p - last > 1) html += '<span class="page-info">...</span>';
     html += `<button onclick="goPage(${p})" class="${p===currentPage?'active':''}">${p}</button>`; last = p;
   }
-  html += `<button onclick="goPage(${currentPage+1})" ${currentPage>=tp?'disabled':''}>&raquo;</button>`;
-  html += `<span class="page-info">${currentPage}/${tp}</span>`;
+  html += `<button onclick="goPage(${currentPage+1})" ${currentPage>=tp?'disabled':''}>&#187;</button>`;
+  html += `<span class="page-info">${currentPage} / ${tp}</span>`;
   el.innerHTML = html;
 }
 function goPage(p) {
   const tp = Math.ceil(filtered.length / PAGE_SIZE);
   if (p < 1 || p > tp) return; currentPage = p; render();
-  document.querySelector('.table-wrap').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  document.querySelector('.card-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
+// ===== Detail (read-only) =====
 function showDetail(id) {
   const q = DATA.find(x => x.id === id); if (!q) return;
+  const style = getTypeStyle(q.examType);
   let html = `<h2>${esc(q.examYear)} ${esc(q.examType)} 第${q.questionSeq}題</h2>`;
-  html += `<div class="detail-meta" style="margin-bottom:1rem">`;
-  html += `<span><span class="key">考試：</span><span class="tag ${tagClass(q.examType)}">${q.examType}</span></span>`;
+  html += `<div class="detail-meta">`;
+  html += `<span><span class="key">考試：</span><span class="tag ${style.tag}">${q.examType}</span></span>`;
   html += `<span><span class="key">試年：</span>${esc(q.examYear)}</span>`;
-  html += `<span><span class="key">出處：</span>${esc(q.source||'')}</span>`;
-  html += `</div>`;
-  html += '<div>';
+  if (q.source) html += `<span><span class="key">出處：</span>${esc(q.source)}</span>`;
+  html += `</div><div>`;
   for (const s of q.stocks) {
     html += `<div class="stock-detail-row"><div class="stock-num">第${s.seq}股</div><div class="stock-info">`;
     if (s.duke && s.duke !== '?') html += `<div class="code-line">${esc(s.duke)}${s.year!=='?'?s.year+'年':''}</div>`;
     html += `<div class="text-line">${esc(s.text)}</div></div></div>`;
   }
-  html += '</div>';
-  html += `<div class="form-actions"><button class="btn" onclick="closeModal()">關閉</button></div>`;
+  html += `</div><div class="detail-actions"><button class="btn" onclick="closeModal()">關閉</button></div>`;
   document.getElementById('modal-content').innerHTML = html;
   document.getElementById('modal-overlay').classList.add('show');
 }
 
-function closeModal() { document.getElementById('modal-overlay').classList.remove('show'); }
+function closeModal(){document.getElementById('modal-overlay').classList.remove('show');}
 
 // Events
-document.getElementById('modal-overlay').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+document.getElementById('modal-overlay').addEventListener('click', function(e){if(e.target===this)closeModal();});
+document.addEventListener('keydown', e=>{if(e.key==='Escape')closeModal();});
 document.getElementById('search').addEventListener('input', debounce(applyFilters, 300));
-['filter-type','filter-duke'].forEach(id => document.getElementById(id).addEventListener('change', applyFilters));
-document.querySelectorAll('thead th[data-sort]').forEach(th => {
-  th.addEventListener('click', () => {
-    const key = th.dataset.sort;
+['filter-type','filter-duke'].forEach(id => document.getElementById(id).addEventListener('change', () => { applyFilters(); if(id==='filter-type') updateChipActive(document.getElementById('filter-type').value); }));
+document.querySelectorAll('.sort-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const key = btn.dataset.sort;
     if (sortKey === key) sortAsc = !sortAsc; else { sortKey = key; sortAsc = true; }
+    document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
     applySort(); currentPage = 1; render();
   });
 });
 
-// Init - always load from data.json (no localStorage)
+// Init — always load from data.json
 fetch('data.json').then(r => r.json()).then(data => {
   DATA = data; updateStats(); filtered = [...DATA]; render();
-}).catch(() => { document.getElementById('table-body').innerHTML = '<tr><td colspan="6" style="text-align:center;padding:2rem">載入資料失敗，請確認 data.json 存在。</td></tr>'; });
+}).catch(() => { document.getElementById('card-grid').innerHTML = '<div style="text-align:center;padding:3rem;color:var(--text-dim)">載入失敗，請確認 data.json 存在。</div>'; });
 </script>
 </body>
 </html>
