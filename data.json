@@ -18638,5 +18638,3765 @@
         "abbrev": ""
       }
     ]
+  },
+  {
+    "id": 587,
+    "examType": "江西鄉試",
+    "session": 1,
+    "examYear": "天順三年",
+    "questionSeq": 1,
+    "stockCount": 8,
+    "fullText": "僖公／僖公／僖公／僖公／僖公／僖公／僖公／僖公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "e-2-6",
+        "duke": "僖公",
+        "year": 2,
+        "text": "僖公",
+        "abbrev": "2"
+      },
+      {
+        "seq": 2,
+        "code": "e-3-6",
+        "duke": "僖公",
+        "year": 3,
+        "text": "僖公",
+        "abbrev": "3"
+      },
+      {
+        "seq": 3,
+        "code": "e-4-1",
+        "duke": "僖公",
+        "year": 4,
+        "text": "僖公",
+        "abbrev": "4"
+      },
+      {
+        "seq": 4,
+        "code": "e-5-6",
+        "duke": "僖公",
+        "year": 5,
+        "text": "僖公",
+        "abbrev": "5"
+      },
+      {
+        "seq": 5,
+        "code": "e-26-5",
+        "duke": "僖公",
+        "year": 26,
+        "text": "僖公",
+        "abbrev": "26"
+      },
+      {
+        "seq": 6,
+        "code": "e-27-5",
+        "duke": "僖公",
+        "year": 27,
+        "text": "僖公",
+        "abbrev": "27"
+      },
+      {
+        "seq": 7,
+        "code": "e-28-5",
+        "duke": "僖公",
+        "year": 28,
+        "text": "僖公",
+        "abbrev": "28"
+      },
+      {
+        "seq": 8,
+        "code": "e-28-8",
+        "duke": "僖公",
+        "year": 28,
+        "text": "僖公",
+        "abbrev": "28"
+      }
+    ]
+  },
+  {
+    "id": 588,
+    "examType": "江西鄉試",
+    "session": 1,
+    "examYear": "天順三年",
+    "questionSeq": 2,
+    "stockCount": 6,
+    "fullText": "僖公／僖公／定公／定公／定公／定公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "e-5-4",
+        "duke": "僖公",
+        "year": 5,
+        "text": "僖公",
+        "abbrev": "5"
+      },
+      {
+        "seq": 2,
+        "code": "e-9-2",
+        "duke": "僖公",
+        "year": 9,
+        "text": "僖公",
+        "abbrev": "9"
+      },
+      {
+        "seq": 3,
+        "code": "k-10-4",
+        "duke": "定公",
+        "year": 10,
+        "text": "定公",
+        "abbrev": "10"
+      },
+      {
+        "seq": 4,
+        "code": "k-10-2",
+        "duke": "定公",
+        "year": 10,
+        "text": "定公",
+        "abbrev": "10"
+      },
+      {
+        "seq": 5,
+        "code": "k-12-3",
+        "duke": "定公",
+        "year": 12,
+        "text": "定公",
+        "abbrev": "12"
+      },
+      {
+        "seq": 6,
+        "code": "k-12-5",
+        "duke": "定公",
+        "year": 12,
+        "text": "定公",
+        "abbrev": "12"
+      }
+    ]
+  },
+  {
+    "id": 589,
+    "examType": "江西鄉試",
+    "session": 1,
+    "examYear": "天順三年",
+    "questionSeq": 3,
+    "stockCount": 5,
+    "fullText": "宣公／成公／襄公／昭公／哀公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "g-11-2",
+        "duke": "宣公",
+        "year": 11,
+        "text": "宣公",
+        "abbrev": "11"
+      },
+      {
+        "seq": 2,
+        "code": "h-2-9",
+        "duke": "成公",
+        "year": 2,
+        "text": "成公",
+        "abbrev": "2"
+      },
+      {
+        "seq": 3,
+        "code": "i-27-2",
+        "duke": "襄公",
+        "year": 27,
+        "text": "襄公",
+        "abbrev": "27"
+      },
+      {
+        "seq": 4,
+        "code": "j-1-2",
+        "duke": "昭公",
+        "year": 1,
+        "text": "昭公",
+        "abbrev": "1"
+      },
+      {
+        "seq": 5,
+        "code": "l-13-3",
+        "duke": "哀公",
+        "year": 13,
+        "text": "哀公",
+        "abbrev": "13"
+      }
+    ]
+  },
+  {
+    "id": 590,
+    "examType": "江西鄉試",
+    "session": 1,
+    "examYear": "天順三年",
+    "questionSeq": 4,
+    "stockCount": 3,
+    "fullText": "宣公／成公／哀公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "g-15-2",
+        "duke": "宣公",
+        "year": 15,
+        "text": "宣公",
+        "abbrev": "15"
+      },
+      {
+        "seq": 2,
+        "code": "h-2-4",
+        "duke": "成公",
+        "year": 2,
+        "text": "成公",
+        "abbrev": "2"
+      },
+      {
+        "seq": 3,
+        "code": "l-8-2",
+        "duke": "哀公",
+        "year": 8,
+        "text": "哀公",
+        "abbrev": "8"
+      }
+    ]
+  },
+  {
+    "id": 591,
+    "examType": "江西鄉試",
+    "session": 2,
+    "examYear": "成化十年",
+    "questionSeq": 1,
+    "stockCount": 6,
+    "fullText": "莊公／閔公／僖公／文公／文公／襄公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "c-6-2",
+        "duke": "莊公",
+        "year": 6,
+        "text": "莊公",
+        "abbrev": "6"
+      },
+      {
+        "seq": 2,
+        "code": "d-1-4",
+        "duke": "閔公",
+        "year": 1,
+        "text": "閔公",
+        "abbrev": "1"
+      },
+      {
+        "seq": 3,
+        "code": "e-4-3",
+        "duke": "僖公",
+        "year": 4,
+        "text": "僖公",
+        "abbrev": "4"
+      },
+      {
+        "seq": 4,
+        "code": "f-9-11",
+        "duke": "文公",
+        "year": 9,
+        "text": "文公",
+        "abbrev": "9"
+      },
+      {
+        "seq": 5,
+        "code": "f-12-6",
+        "duke": "文公",
+        "year": 12,
+        "text": "文公",
+        "abbrev": "12"
+      },
+      {
+        "seq": 6,
+        "code": "i-29-8",
+        "duke": "襄公",
+        "year": 29,
+        "text": "襄公",
+        "abbrev": "29"
+      }
+    ]
+  },
+  {
+    "id": 592,
+    "examType": "江西鄉試",
+    "session": 2,
+    "examYear": "成化十年",
+    "questionSeq": 2,
+    "stockCount": 5,
+    "fullText": "僖公／僖公／僖公／僖公／僖公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "e-3-4",
+        "duke": "僖公",
+        "year": 3,
+        "text": "僖公",
+        "abbrev": "3"
+      },
+      {
+        "seq": 2,
+        "code": "e-4-1",
+        "duke": "僖公",
+        "year": 4,
+        "text": "僖公",
+        "abbrev": "4"
+      },
+      {
+        "seq": 3,
+        "code": "e-4-3",
+        "duke": "僖公",
+        "year": 4,
+        "text": "僖公",
+        "abbrev": "4"
+      },
+      {
+        "seq": 4,
+        "code": "e-4-4",
+        "duke": "僖公",
+        "year": 4,
+        "text": "僖公",
+        "abbrev": "4"
+      },
+      {
+        "seq": 5,
+        "code": "e-4-4",
+        "duke": "僖公",
+        "year": 4,
+        "text": "僖公",
+        "abbrev": "4"
+      }
+    ]
+  },
+  {
+    "id": 593,
+    "examType": "江西鄉試",
+    "session": 2,
+    "examYear": "成化十年",
+    "questionSeq": 3,
+    "stockCount": 3,
+    "fullText": "宣公／定公／定公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "g-15-2",
+        "duke": "宣公",
+        "year": 15,
+        "text": "宣公",
+        "abbrev": "15"
+      },
+      {
+        "seq": 2,
+        "code": "k-10-2",
+        "duke": "定公",
+        "year": 10,
+        "text": "定公",
+        "abbrev": "10"
+      },
+      {
+        "seq": 3,
+        "code": "k-10-4",
+        "duke": "定公",
+        "year": 10,
+        "text": "定公",
+        "abbrev": "10"
+      }
+    ]
+  },
+  {
+    "id": 594,
+    "examType": "江西鄉試",
+    "session": 2,
+    "examYear": "成化十年",
+    "questionSeq": 4,
+    "stockCount": 2,
+    "fullText": "成公／成公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "h-13-2",
+        "duke": "成公",
+        "year": 13,
+        "text": "成公",
+        "abbrev": "13"
+      },
+      {
+        "seq": 2,
+        "code": "h-13-2",
+        "duke": "成公",
+        "year": 13,
+        "text": "成公",
+        "abbrev": "13"
+      }
+    ]
+  },
+  {
+    "id": 595,
+    "examType": "江西鄉試",
+    "session": 3,
+    "examYear": "成化十三年",
+    "questionSeq": 1,
+    "stockCount": 5,
+    "fullText": "桓公／僖公／僖公／僖公／僖公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "b-6-3",
+        "duke": "桓公",
+        "year": 6,
+        "text": "桓公",
+        "abbrev": "6"
+      },
+      {
+        "seq": 2,
+        "code": "e-5-4",
+        "duke": "僖公",
+        "year": 5,
+        "text": "僖公",
+        "abbrev": "5"
+      },
+      {
+        "seq": 3,
+        "code": "e-5-6",
+        "duke": "僖公",
+        "year": 5,
+        "text": "僖公",
+        "abbrev": "5"
+      },
+      {
+        "seq": 4,
+        "code": "e-28-8",
+        "duke": "僖公",
+        "year": 28,
+        "text": "僖公",
+        "abbrev": "28"
+      },
+      {
+        "seq": 5,
+        "code": "e-28-15",
+        "duke": "僖公",
+        "year": 28,
+        "text": "僖公",
+        "abbrev": "28"
+      }
+    ]
+  },
+  {
+    "id": 596,
+    "examType": "江西鄉試",
+    "session": 3,
+    "examYear": "成化十三年",
+    "questionSeq": 2,
+    "stockCount": 5,
+    "fullText": "僖公／僖公／襄公／襄公／襄公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "e-27-5",
+        "duke": "僖公",
+        "year": 27,
+        "text": "僖公",
+        "abbrev": "27"
+      },
+      {
+        "seq": 2,
+        "code": "e-28-5",
+        "duke": "僖公",
+        "year": 28,
+        "text": "僖公",
+        "abbrev": "28"
+      },
+      {
+        "seq": 3,
+        "code": "i-8-3",
+        "duke": "襄公",
+        "year": 8,
+        "text": "襄公",
+        "abbrev": "8"
+      },
+      {
+        "seq": 4,
+        "code": "i-8-8",
+        "duke": "襄公",
+        "year": 8,
+        "text": "襄公",
+        "abbrev": "8"
+      },
+      {
+        "seq": 5,
+        "code": "i-9-5",
+        "duke": "襄公",
+        "year": 9,
+        "text": "襄公",
+        "abbrev": "9"
+      }
+    ]
+  },
+  {
+    "id": 597,
+    "examType": "江西鄉試",
+    "session": 3,
+    "examYear": "成化十三年",
+    "questionSeq": 3,
+    "stockCount": 2,
+    "fullText": "昭公／昭公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "j-5-1",
+        "duke": "昭公",
+        "year": 5,
+        "text": "昭公",
+        "abbrev": "5"
+      },
+      {
+        "seq": 2,
+        "code": "j-26-4",
+        "duke": "昭公",
+        "year": 26,
+        "text": "昭公",
+        "abbrev": "26"
+      }
+    ]
+  },
+  {
+    "id": 598,
+    "examType": "江西鄉試",
+    "session": 3,
+    "examYear": "成化十三年",
+    "questionSeq": 4,
+    "stockCount": 4,
+    "fullText": "定公／定公／定公／定公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "k-10-2",
+        "duke": "定公",
+        "year": 10,
+        "text": "定公",
+        "abbrev": "10"
+      },
+      {
+        "seq": 2,
+        "code": "k-10-4",
+        "duke": "定公",
+        "year": 10,
+        "text": "定公",
+        "abbrev": "10"
+      },
+      {
+        "seq": 3,
+        "code": "k-12-3",
+        "duke": "定公",
+        "year": 12,
+        "text": "定公",
+        "abbrev": "12"
+      },
+      {
+        "seq": 4,
+        "code": "k-12-5",
+        "duke": "定公",
+        "year": 12,
+        "text": "定公",
+        "abbrev": "12"
+      }
+    ]
+  },
+  {
+    "id": 599,
+    "examType": "江西鄉試",
+    "session": 4,
+    "examYear": "弘治二年",
+    "questionSeq": 1,
+    "stockCount": 7,
+    "fullText": "莊公／莊公／莊公／僖公／僖公／襄公／昭公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "c-10-5",
+        "duke": "莊公",
+        "year": 10,
+        "text": "莊公",
+        "abbrev": "10"
+      },
+      {
+        "seq": 2,
+        "code": "c-23-5",
+        "duke": "莊公",
+        "year": 23,
+        "text": "莊公",
+        "abbrev": "23"
+      },
+      {
+        "seq": 3,
+        "code": "c-28-3",
+        "duke": "莊公",
+        "year": 28,
+        "text": "莊公",
+        "abbrev": "28"
+      },
+      {
+        "seq": 4,
+        "code": "e-1-5",
+        "duke": "僖公",
+        "year": 1,
+        "text": "僖公",
+        "abbrev": "1"
+      },
+      {
+        "seq": 5,
+        "code": "e-21-4",
+        "duke": "僖公",
+        "year": 21,
+        "text": "僖公",
+        "abbrev": "21"
+      },
+      {
+        "seq": 6,
+        "code": "i-28-7",
+        "duke": "襄公",
+        "year": 28,
+        "text": "襄公",
+        "abbrev": "28"
+      },
+      {
+        "seq": 7,
+        "code": "j-1-2",
+        "duke": "昭公",
+        "year": 1,
+        "text": "昭公",
+        "abbrev": "1"
+      }
+    ]
+  },
+  {
+    "id": 600,
+    "examType": "江西鄉試",
+    "session": 4,
+    "examYear": "弘治二年",
+    "questionSeq": 2,
+    "stockCount": 1,
+    "fullText": "僖公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "e-9-2",
+        "duke": "僖公",
+        "year": 9,
+        "text": "僖公",
+        "abbrev": "9"
+      }
+    ]
+  },
+  {
+    "id": 601,
+    "examType": "江西鄉試",
+    "session": 4,
+    "examYear": "弘治二年",
+    "questionSeq": 3,
+    "stockCount": 2,
+    "fullText": "閔公／昭公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "d-2-8",
+        "duke": "閔公",
+        "year": 2,
+        "text": "閔公",
+        "abbrev": "2"
+      },
+      {
+        "seq": 2,
+        "code": "j-26-4",
+        "duke": "昭公",
+        "year": 26,
+        "text": "昭公",
+        "abbrev": "26"
+      }
+    ]
+  },
+  {
+    "id": 602,
+    "examType": "江西鄉試",
+    "session": 4,
+    "examYear": "弘治二年",
+    "questionSeq": 4,
+    "stockCount": 2,
+    "fullText": "宣公／成公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "g-2-1",
+        "duke": "宣公",
+        "year": 2,
+        "text": "宣公",
+        "abbrev": "2"
+      },
+      {
+        "seq": 2,
+        "code": "h-15-10",
+        "duke": "成公",
+        "year": 15,
+        "text": "成公",
+        "abbrev": "15"
+      }
+    ]
+  },
+  {
+    "id": 603,
+    "examType": "江西鄉試",
+    "session": 5,
+    "examYear": "弘治五年",
+    "questionSeq": 1,
+    "stockCount": 1,
+    "fullText": "僖公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "e-5-4",
+        "duke": "僖公",
+        "year": 5,
+        "text": "僖公",
+        "abbrev": "5"
+      }
+    ]
+  },
+  {
+    "id": 604,
+    "examType": "江西鄉試",
+    "session": 5,
+    "examYear": "弘治五年",
+    "questionSeq": 2,
+    "stockCount": 3,
+    "fullText": "宣公／成公／哀公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "g-15-8",
+        "duke": "宣公",
+        "year": 15,
+        "text": "宣公",
+        "abbrev": "15"
+      },
+      {
+        "seq": 2,
+        "code": "h-1-4",
+        "duke": "成公",
+        "year": 1,
+        "text": "成公",
+        "abbrev": "1"
+      },
+      {
+        "seq": 3,
+        "code": "l-12-1",
+        "duke": "哀公",
+        "year": 12,
+        "text": "哀公",
+        "abbrev": "12"
+      }
+    ]
+  },
+  {
+    "id": 605,
+    "examType": "江西鄉試",
+    "session": 5,
+    "examYear": "弘治五年",
+    "questionSeq": 3,
+    "stockCount": 1,
+    "fullText": "成公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "h-6-2",
+        "duke": "成公",
+        "year": 6,
+        "text": "成公",
+        "abbrev": "6"
+      }
+    ]
+  },
+  {
+    "id": 606,
+    "examType": "江西鄉試",
+    "session": 5,
+    "examYear": "弘治五年",
+    "questionSeq": 4,
+    "stockCount": 3,
+    "fullText": "襄公／襄公／襄公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "i-2-9",
+        "duke": "襄公",
+        "year": 2,
+        "text": "襄公",
+        "abbrev": "2"
+      },
+      {
+        "seq": 2,
+        "code": "i-10-9",
+        "duke": "襄公",
+        "year": 10,
+        "text": "襄公",
+        "abbrev": "10"
+      },
+      {
+        "seq": 3,
+        "code": "i-10-9",
+        "duke": "襄公",
+        "year": 10,
+        "text": "襄公",
+        "abbrev": "10"
+      }
+    ]
+  },
+  {
+    "id": 607,
+    "examType": "江西鄉試",
+    "session": 6,
+    "examYear": "弘治十四年",
+    "questionSeq": 1,
+    "stockCount": 1,
+    "fullText": "莊公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "c-22-1",
+        "duke": "莊公",
+        "year": 22,
+        "text": "莊公",
+        "abbrev": "22"
+      }
+    ]
+  },
+  {
+    "id": 608,
+    "examType": "江西鄉試",
+    "session": 6,
+    "examYear": "弘治十四年",
+    "questionSeq": 2,
+    "stockCount": 4,
+    "fullText": "文公／成公／成公／哀公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "f-12-7",
+        "duke": "文公",
+        "year": 12,
+        "text": "文公",
+        "abbrev": "12"
+      },
+      {
+        "seq": 2,
+        "code": "h-2-3",
+        "duke": "成公",
+        "year": 2,
+        "text": "成公",
+        "abbrev": "2"
+      },
+      {
+        "seq": 3,
+        "code": "h-16-6",
+        "duke": "成公",
+        "year": 16,
+        "text": "成公",
+        "abbrev": "16"
+      },
+      {
+        "seq": 4,
+        "code": "l-2-5",
+        "duke": "哀公",
+        "year": 2,
+        "text": "哀公",
+        "abbrev": "2"
+      }
+    ]
+  },
+  {
+    "id": 609,
+    "examType": "江西鄉試",
+    "session": 6,
+    "examYear": "弘治十四年",
+    "questionSeq": 3,
+    "stockCount": 7,
+    "fullText": "宣公／宣公／成公／成公／成公／襄公／襄公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "g-1-12",
+        "duke": "宣公",
+        "year": 1,
+        "text": "宣公",
+        "abbrev": "1"
+      },
+      {
+        "seq": 2,
+        "code": "g-2-3",
+        "duke": "宣公",
+        "year": 2,
+        "text": "宣公",
+        "abbrev": "2"
+      },
+      {
+        "seq": 3,
+        "code": "h-9-6",
+        "duke": "成公",
+        "year": 9,
+        "text": "成公",
+        "abbrev": "9"
+      },
+      {
+        "seq": 4,
+        "code": "h-17-2",
+        "duke": "成公",
+        "year": 17,
+        "text": "成公",
+        "abbrev": "17"
+      },
+      {
+        "seq": 5,
+        "code": "h-17-8",
+        "duke": "成公",
+        "year": 17,
+        "text": "成公",
+        "abbrev": "17"
+      },
+      {
+        "seq": 6,
+        "code": "i-10-9",
+        "duke": "襄公",
+        "year": 10,
+        "text": "襄公",
+        "abbrev": "10"
+      },
+      {
+        "seq": 7,
+        "code": "i-10-9",
+        "duke": "襄公",
+        "year": 10,
+        "text": "襄公",
+        "abbrev": "10"
+      }
+    ]
+  },
+  {
+    "id": 610,
+    "examType": "江西鄉試",
+    "session": 6,
+    "examYear": "弘治十四年",
+    "questionSeq": 4,
+    "stockCount": 2,
+    "fullText": "定公／定公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "k-4-2",
+        "duke": "定公",
+        "year": 4,
+        "text": "定公",
+        "abbrev": "4"
+      },
+      {
+        "seq": 2,
+        "code": "k-4-4",
+        "duke": "定公",
+        "year": 4,
+        "text": "定公",
+        "abbrev": "4"
+      }
+    ]
+  },
+  {
+    "id": 611,
+    "examType": "江西鄉試",
+    "session": 7,
+    "examYear": "正德二年",
+    "questionSeq": 1,
+    "stockCount": 1,
+    "fullText": "桓公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "b-16-1",
+        "duke": "桓公",
+        "year": 16,
+        "text": "桓公",
+        "abbrev": "16"
+      }
+    ]
+  },
+  {
+    "id": 612,
+    "examType": "江西鄉試",
+    "session": 7,
+    "examYear": "正德二年",
+    "questionSeq": 2,
+    "stockCount": 1,
+    "fullText": "莊公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "c-3-4",
+        "duke": "莊公",
+        "year": 3,
+        "text": "莊公",
+        "abbrev": "3"
+      }
+    ]
+  },
+  {
+    "id": 613,
+    "examType": "江西鄉試",
+    "session": 7,
+    "examYear": "正德二年",
+    "questionSeq": 3,
+    "stockCount": 4,
+    "fullText": "僖公／文公／文公／文公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "e-33-3",
+        "duke": "僖公",
+        "year": 33,
+        "text": "僖公",
+        "abbrev": "33"
+      },
+      {
+        "seq": 2,
+        "code": "f-2-1",
+        "duke": "文公",
+        "year": 2,
+        "text": "文公",
+        "abbrev": "2"
+      },
+      {
+        "seq": 3,
+        "code": "f-2-7",
+        "duke": "文公",
+        "year": 2,
+        "text": "文公",
+        "abbrev": "2"
+      },
+      {
+        "seq": 4,
+        "code": "f-3-3",
+        "duke": "文公",
+        "year": 3,
+        "text": "文公",
+        "abbrev": "3"
+      }
+    ]
+  },
+  {
+    "id": 614,
+    "examType": "江西鄉試",
+    "session": 7,
+    "examYear": "正德二年",
+    "questionSeq": 4,
+    "stockCount": 2,
+    "fullText": "定公／定公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "k-4-14",
+        "duke": "定公",
+        "year": 4,
+        "text": "定公",
+        "abbrev": "4"
+      },
+      {
+        "seq": 2,
+        "code": "k-4-15",
+        "duke": "定公",
+        "year": 4,
+        "text": "定公",
+        "abbrev": "4"
+      }
+    ]
+  },
+  {
+    "id": 615,
+    "examType": "江西鄉試",
+    "session": 8,
+    "examYear": "正德五年",
+    "questionSeq": 1,
+    "stockCount": 1,
+    "fullText": "桓公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "b-13-2",
+        "duke": "桓公",
+        "year": 13,
+        "text": "桓公",
+        "abbrev": "13"
+      }
+    ]
+  },
+  {
+    "id": 616,
+    "examType": "江西鄉試",
+    "session": 8,
+    "examYear": "正德五年",
+    "questionSeq": 2,
+    "stockCount": 3,
+    "fullText": "僖公／僖公／僖公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "e-1-2",
+        "duke": "僖公",
+        "year": 1,
+        "text": "僖公",
+        "abbrev": "1"
+      },
+      {
+        "seq": 2,
+        "code": "e-1-3",
+        "duke": "僖公",
+        "year": 1,
+        "text": "僖公",
+        "abbrev": "1"
+      },
+      {
+        "seq": 3,
+        "code": "e-1-3",
+        "duke": "僖公",
+        "year": 1,
+        "text": "僖公",
+        "abbrev": "1"
+      }
+    ]
+  },
+  {
+    "id": 617,
+    "examType": "江西鄉試",
+    "session": 9,
+    "examYear": "正德八年",
+    "questionSeq": 1,
+    "stockCount": 5,
+    "fullText": "桓公／莊公／僖公／僖公／文公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "b-2-2",
+        "duke": "桓公",
+        "year": 2,
+        "text": "桓公",
+        "abbrev": "2"
+      },
+      {
+        "seq": 2,
+        "code": "c-12-3",
+        "duke": "莊公",
+        "year": 12,
+        "text": "莊公",
+        "abbrev": "12"
+      },
+      {
+        "seq": 3,
+        "code": "e-10-3",
+        "duke": "僖公",
+        "year": 10,
+        "text": "僖公",
+        "abbrev": "10"
+      },
+      {
+        "seq": 4,
+        "code": "e-10-4",
+        "duke": "僖公",
+        "year": 10,
+        "text": "僖公",
+        "abbrev": "10"
+      },
+      {
+        "seq": 5,
+        "code": "f-14-10",
+        "duke": "文公",
+        "year": 14,
+        "text": "文公",
+        "abbrev": "14"
+      }
+    ]
+  },
+  {
+    "id": 618,
+    "examType": "江西鄉試",
+    "session": 10,
+    "examYear": "正德十一年",
+    "questionSeq": 1,
+    "stockCount": 2,
+    "fullText": "隱公／僖公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "a-5-3",
+        "duke": "隱公",
+        "year": 5,
+        "text": "隱公",
+        "abbrev": "5"
+      },
+      {
+        "seq": 2,
+        "code": "e-1-3",
+        "duke": "僖公",
+        "year": 1,
+        "text": "僖公",
+        "abbrev": "1"
+      }
+    ]
+  },
+  {
+    "id": 619,
+    "examType": "江西鄉試",
+    "session": 10,
+    "examYear": "正德十一年",
+    "questionSeq": 2,
+    "stockCount": 1,
+    "fullText": "宣公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "g-12-7",
+        "duke": "宣公",
+        "year": 12,
+        "text": "宣公",
+        "abbrev": "12"
+      }
+    ]
+  },
+  {
+    "id": 620,
+    "examType": "江西鄉試",
+    "session": 10,
+    "examYear": "正德十一年",
+    "questionSeq": 3,
+    "stockCount": 1,
+    "fullText": "宣公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "g-10-9",
+        "duke": "宣公",
+        "year": 10,
+        "text": "宣公",
+        "abbrev": "10"
+      }
+    ]
+  },
+  {
+    "id": 621,
+    "examType": "江西鄉試",
+    "session": 10,
+    "examYear": "正德十一年",
+    "questionSeq": 4,
+    "stockCount": 7,
+    "fullText": "隱公／莊公／僖公／僖公／僖公／昭公／昭公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "a-1-5",
+        "duke": "隱公",
+        "year": 1,
+        "text": "隱公",
+        "abbrev": "1"
+      },
+      {
+        "seq": 2,
+        "code": "c-6-2",
+        "duke": "莊公",
+        "year": 6,
+        "text": "莊公",
+        "abbrev": "6"
+      },
+      {
+        "seq": 3,
+        "code": "e-8-1",
+        "duke": "僖公",
+        "year": 8,
+        "text": "僖公",
+        "abbrev": "8"
+      },
+      {
+        "seq": 4,
+        "code": "e-9-2",
+        "duke": "僖公",
+        "year": 9,
+        "text": "僖公",
+        "abbrev": "9"
+      },
+      {
+        "seq": 5,
+        "code": "e-29-3",
+        "duke": "僖公",
+        "year": 29,
+        "text": "僖公",
+        "abbrev": "29"
+      },
+      {
+        "seq": 6,
+        "code": "j-13-4",
+        "duke": "昭公",
+        "year": 13,
+        "text": "昭公",
+        "abbrev": "13"
+      },
+      {
+        "seq": 7,
+        "code": "j-23-9",
+        "duke": "昭公",
+        "year": 23,
+        "text": "昭公",
+        "abbrev": "23"
+      }
+    ]
+  },
+  {
+    "id": 622,
+    "examType": "江西鄉試",
+    "session": 11,
+    "examYear": "嘉靖元年",
+    "questionSeq": 1,
+    "stockCount": 3,
+    "fullText": "隱公／文公／莊公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "a-1-3",
+        "duke": "隱公",
+        "year": 1,
+        "text": "隱公",
+        "abbrev": "1"
+      },
+      {
+        "seq": 2,
+        "code": "f-2-2",
+        "duke": "文公",
+        "year": 2,
+        "text": "文公",
+        "abbrev": "2"
+      },
+      {
+        "seq": 3,
+        "code": "c-2-2",
+        "duke": "莊公",
+        "year": 2,
+        "text": "莊公",
+        "abbrev": "2"
+      }
+    ]
+  },
+  {
+    "id": 623,
+    "examType": "江西鄉試",
+    "session": 11,
+    "examYear": "嘉靖元年",
+    "questionSeq": 2,
+    "stockCount": 1,
+    "fullText": "襄公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "i-8-4",
+        "duke": "襄公",
+        "year": 8,
+        "text": "襄公",
+        "abbrev": "8"
+      }
+    ]
+  },
+  {
+    "id": 624,
+    "examType": "江西鄉試",
+    "session": 11,
+    "examYear": "嘉靖元年",
+    "questionSeq": 3,
+    "stockCount": 4,
+    "fullText": "僖公／僖公／僖公／僖公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "e-18-1",
+        "duke": "僖公",
+        "year": 18,
+        "text": "僖公",
+        "abbrev": "18"
+      },
+      {
+        "seq": 2,
+        "code": "e-18-1",
+        "duke": "僖公",
+        "year": 18,
+        "text": "僖公",
+        "abbrev": "18"
+      },
+      {
+        "seq": 3,
+        "code": "e-18-1",
+        "duke": "僖公",
+        "year": 18,
+        "text": "僖公",
+        "abbrev": "18"
+      },
+      {
+        "seq": 4,
+        "code": "e-18-3",
+        "duke": "僖公",
+        "year": 18,
+        "text": "僖公",
+        "abbrev": "18"
+      }
+    ]
+  },
+  {
+    "id": 625,
+    "examType": "江西鄉試",
+    "session": 11,
+    "examYear": "嘉靖元年",
+    "questionSeq": 4,
+    "stockCount": 2,
+    "fullText": "襄公／襄公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "i-27-2",
+        "duke": "襄公",
+        "year": 27,
+        "text": "襄公",
+        "abbrev": "27"
+      },
+      {
+        "seq": 2,
+        "code": "i-27-5",
+        "duke": "襄公",
+        "year": 27,
+        "text": "襄公",
+        "abbrev": "27"
+      }
+    ]
+  },
+  {
+    "id": 626,
+    "examType": "江西鄉試",
+    "session": 12,
+    "examYear": "嘉靖四年",
+    "questionSeq": 1,
+    "stockCount": 2,
+    "fullText": "隱公／桓公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "a-1-2",
+        "duke": "隱公",
+        "year": 1,
+        "text": "隱公",
+        "abbrev": "1"
+      },
+      {
+        "seq": 2,
+        "code": "b-3-3",
+        "duke": "桓公",
+        "year": 3,
+        "text": "桓公",
+        "abbrev": "3"
+      }
+    ]
+  },
+  {
+    "id": 627,
+    "examType": "江西鄉試",
+    "session": 12,
+    "examYear": "嘉靖四年",
+    "questionSeq": 2,
+    "stockCount": 2,
+    "fullText": "僖公／僖公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "e-11-4",
+        "duke": "僖公",
+        "year": 11,
+        "text": "僖公",
+        "abbrev": "11"
+      },
+      {
+        "seq": 2,
+        "code": "e-12-2",
+        "duke": "僖公",
+        "year": 12,
+        "text": "僖公",
+        "abbrev": "12"
+      }
+    ]
+  },
+  {
+    "id": 628,
+    "examType": "江西鄉試",
+    "session": 12,
+    "examYear": "嘉靖四年",
+    "questionSeq": 3,
+    "stockCount": 1,
+    "fullText": "文公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "f-11-6",
+        "duke": "文公",
+        "year": 11,
+        "text": "文公",
+        "abbrev": "11"
+      }
+    ]
+  },
+  {
+    "id": 629,
+    "examType": "江西鄉試",
+    "session": 12,
+    "examYear": "嘉靖四年",
+    "questionSeq": 4,
+    "stockCount": 3,
+    "fullText": "文公／襄公／襄公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "f-9-11",
+        "duke": "文公",
+        "year": 9,
+        "text": "文公",
+        "abbrev": "9"
+      },
+      {
+        "seq": 2,
+        "code": "i-28-7",
+        "duke": "襄公",
+        "year": 28,
+        "text": "襄公",
+        "abbrev": "28"
+      },
+      {
+        "seq": 3,
+        "code": "i-29-2",
+        "duke": "襄公",
+        "year": 29,
+        "text": "襄公",
+        "abbrev": "29"
+      }
+    ]
+  },
+  {
+    "id": 630,
+    "examType": "江西鄉試",
+    "session": 13,
+    "examYear": "嘉靖七年",
+    "questionSeq": 1,
+    "stockCount": 2,
+    "fullText": "莊公／莊公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "c-13-1",
+        "duke": "莊公",
+        "year": 13,
+        "text": "莊公",
+        "abbrev": "13"
+      },
+      {
+        "seq": 2,
+        "code": "c-14-1",
+        "duke": "莊公",
+        "year": 14,
+        "text": "莊公",
+        "abbrev": "14"
+      }
+    ]
+  },
+  {
+    "id": 631,
+    "examType": "江西鄉試",
+    "session": 13,
+    "examYear": "嘉靖七年",
+    "questionSeq": 2,
+    "stockCount": 1,
+    "fullText": "僖公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "e-12-2",
+        "duke": "僖公",
+        "year": 12,
+        "text": "僖公",
+        "abbrev": "12"
+      }
+    ]
+  },
+  {
+    "id": 632,
+    "examType": "江西鄉試",
+    "session": 13,
+    "examYear": "嘉靖七年",
+    "questionSeq": 3,
+    "stockCount": 2,
+    "fullText": "文公／文公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "f-10-7",
+        "duke": "文公",
+        "year": 10,
+        "text": "文公",
+        "abbrev": "10"
+      },
+      {
+        "seq": 2,
+        "code": "f-14-4",
+        "duke": "文公",
+        "year": 14,
+        "text": "文公",
+        "abbrev": "14"
+      }
+    ]
+  },
+  {
+    "id": 633,
+    "examType": "江西鄉試",
+    "session": 13,
+    "examYear": "嘉靖七年",
+    "questionSeq": 4,
+    "stockCount": 2,
+    "fullText": "昭公／昭公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "j-26-3",
+        "duke": "昭公",
+        "year": 26,
+        "text": "昭公",
+        "abbrev": "26"
+      },
+      {
+        "seq": 2,
+        "code": "j-31-2",
+        "duke": "昭公",
+        "year": 31,
+        "text": "昭公",
+        "abbrev": "31"
+      }
+    ]
+  },
+  {
+    "id": 634,
+    "examType": "江西鄉試",
+    "session": 14,
+    "examYear": "嘉靖十年",
+    "questionSeq": 1,
+    "stockCount": 1,
+    "fullText": "襄公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "i-18-6",
+        "duke": "襄公",
+        "year": 18,
+        "text": "襄公",
+        "abbrev": "18"
+      }
+    ]
+  },
+  {
+    "id": 635,
+    "examType": "江西鄉試",
+    "session": 15,
+    "examYear": "嘉靖十三年",
+    "questionSeq": 1,
+    "stockCount": 1,
+    "fullText": "桓公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "b-5-9",
+        "duke": "桓公",
+        "year": 5,
+        "text": "桓公",
+        "abbrev": "5"
+      }
+    ]
+  },
+  {
+    "id": 636,
+    "examType": "江西鄉試",
+    "session": 15,
+    "examYear": "嘉靖十三年",
+    "questionSeq": 2,
+    "stockCount": 2,
+    "fullText": "桓公／文公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "b-1-3",
+        "duke": "桓公",
+        "year": 1,
+        "text": "桓公",
+        "abbrev": "1"
+      },
+      {
+        "seq": 2,
+        "code": "f-14-7",
+        "duke": "文公",
+        "year": 14,
+        "text": "文公",
+        "abbrev": "14"
+      }
+    ]
+  },
+  {
+    "id": 637,
+    "examType": "江西鄉試",
+    "session": 15,
+    "examYear": "嘉靖十三年",
+    "questionSeq": 3,
+    "stockCount": 6,
+    "fullText": "襄公／襄公／襄公／襄公／襄公／襄公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "i-11-4",
+        "duke": "襄公",
+        "year": 11,
+        "text": "襄公",
+        "abbrev": "11"
+      },
+      {
+        "seq": 2,
+        "code": "i-11-3",
+        "duke": "襄公",
+        "year": 11,
+        "text": "襄公",
+        "abbrev": "11"
+      },
+      {
+        "seq": 3,
+        "code": "i-11-5",
+        "duke": "襄公",
+        "year": 11,
+        "text": "襄公",
+        "abbrev": "11"
+      },
+      {
+        "seq": 4,
+        "code": "i-11-5",
+        "duke": "襄公",
+        "year": 11,
+        "text": "襄公",
+        "abbrev": "11"
+      },
+      {
+        "seq": 5,
+        "code": "i-11-4",
+        "duke": "襄公",
+        "year": 11,
+        "text": "襄公",
+        "abbrev": "11"
+      },
+      {
+        "seq": 6,
+        "code": "i-11-6",
+        "duke": "襄公",
+        "year": 11,
+        "text": "襄公",
+        "abbrev": "11"
+      }
+    ]
+  },
+  {
+    "id": 638,
+    "examType": "江西鄉試",
+    "session": 15,
+    "examYear": "嘉靖十三年",
+    "questionSeq": 4,
+    "stockCount": 1,
+    "fullText": "昭公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "j-5-1",
+        "duke": "昭公",
+        "year": 5,
+        "text": "昭公",
+        "abbrev": "5"
+      }
+    ]
+  },
+  {
+    "id": 639,
+    "examType": "江西鄉試",
+    "session": 16,
+    "examYear": "嘉靖十六年",
+    "questionSeq": 1,
+    "stockCount": 2,
+    "fullText": "莊公／文公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "c-28-3",
+        "duke": "莊公",
+        "year": 28,
+        "text": "莊公",
+        "abbrev": "28"
+      },
+      {
+        "seq": 2,
+        "code": "f-9-8",
+        "duke": "文公",
+        "year": 9,
+        "text": "文公",
+        "abbrev": "9"
+      }
+    ]
+  },
+  {
+    "id": 640,
+    "examType": "江西鄉試",
+    "session": 16,
+    "examYear": "嘉靖十六年",
+    "questionSeq": 2,
+    "stockCount": 1,
+    "fullText": "僖公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "e-21-7",
+        "duke": "僖公",
+        "year": 21,
+        "text": "僖公",
+        "abbrev": "21"
+      }
+    ]
+  },
+  {
+    "id": 641,
+    "examType": "江西鄉試",
+    "session": 16,
+    "examYear": "嘉靖十六年",
+    "questionSeq": 3,
+    "stockCount": 4,
+    "fullText": "僖公／文公／宣公／襄公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "e-27-5",
+        "duke": "僖公",
+        "year": 27,
+        "text": "僖公",
+        "abbrev": "27"
+      },
+      {
+        "seq": 2,
+        "code": "f-14-4",
+        "duke": "文公",
+        "year": 14,
+        "text": "文公",
+        "abbrev": "14"
+      },
+      {
+        "seq": 3,
+        "code": "g-9-5",
+        "duke": "宣公",
+        "year": 9,
+        "text": "宣公",
+        "abbrev": "9"
+      },
+      {
+        "seq": 4,
+        "code": "i-27-2",
+        "duke": "襄公",
+        "year": 27,
+        "text": "襄公",
+        "abbrev": "27"
+      }
+    ]
+  },
+  {
+    "id": 642,
+    "examType": "江西鄉試",
+    "session": 16,
+    "examYear": "嘉靖十六年",
+    "questionSeq": 4,
+    "stockCount": 2,
+    "fullText": "宣公／哀公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "g-12-3",
+        "duke": "宣公",
+        "year": 12,
+        "text": "宣公",
+        "abbrev": "12"
+      },
+      {
+        "seq": 2,
+        "code": "l-8-2",
+        "duke": "哀公",
+        "year": 8,
+        "text": "哀公",
+        "abbrev": "8"
+      }
+    ]
+  },
+  {
+    "id": 643,
+    "examType": "江西鄉試",
+    "session": 17,
+    "examYear": "嘉靖十九年",
+    "questionSeq": 1,
+    "stockCount": 2,
+    "fullText": "莊公／莊公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "c-13-1",
+        "duke": "莊公",
+        "year": 13,
+        "text": "莊公",
+        "abbrev": "13"
+      },
+      {
+        "seq": 2,
+        "code": "c-14-2",
+        "duke": "莊公",
+        "year": 14,
+        "text": "莊公",
+        "abbrev": "14"
+      }
+    ]
+  },
+  {
+    "id": 644,
+    "examType": "江西鄉試",
+    "session": 17,
+    "examYear": "嘉靖十九年",
+    "questionSeq": 2,
+    "stockCount": 1,
+    "fullText": "宣公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "g-1-12",
+        "duke": "宣公",
+        "year": 1,
+        "text": "宣公",
+        "abbrev": "1"
+      }
+    ]
+  },
+  {
+    "id": 645,
+    "examType": "江西鄉試",
+    "session": 17,
+    "examYear": "嘉靖十九年",
+    "questionSeq": 3,
+    "stockCount": 1,
+    "fullText": "襄公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "i-9-5",
+        "duke": "襄公",
+        "year": 9,
+        "text": "襄公",
+        "abbrev": "9"
+      }
+    ]
+  },
+  {
+    "id": 646,
+    "examType": "江西鄉試",
+    "session": 17,
+    "examYear": "嘉靖十九年",
+    "questionSeq": 4,
+    "stockCount": 4,
+    "fullText": "昭公／昭公／昭公／昭公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "j-5-1",
+        "duke": "昭公",
+        "year": 5,
+        "text": "昭公",
+        "abbrev": "5"
+      },
+      {
+        "seq": 2,
+        "code": "j-9-5",
+        "duke": "昭公",
+        "year": 9,
+        "text": "昭公",
+        "abbrev": "9"
+      },
+      {
+        "seq": 3,
+        "code": "j-23-3",
+        "duke": "昭公",
+        "year": 23,
+        "text": "昭公",
+        "abbrev": "23"
+      },
+      {
+        "seq": 4,
+        "code": "j-24-2",
+        "duke": "昭公",
+        "year": 24,
+        "text": "昭公",
+        "abbrev": "24"
+      }
+    ]
+  },
+  {
+    "id": 647,
+    "examType": "江西鄉試",
+    "session": 18,
+    "examYear": "嘉靖二十二年",
+    "questionSeq": 1,
+    "stockCount": 4,
+    "fullText": "莊公／莊公／莊公／莊公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "c-5-4",
+        "duke": "莊公",
+        "year": 5,
+        "text": "莊公",
+        "abbrev": "5"
+      },
+      {
+        "seq": 2,
+        "code": "c-6-2",
+        "duke": "莊公",
+        "year": 6,
+        "text": "莊公",
+        "abbrev": "6"
+      },
+      {
+        "seq": 3,
+        "code": "c-6-3",
+        "duke": "莊公",
+        "year": 6,
+        "text": "莊公",
+        "abbrev": "6"
+      },
+      {
+        "seq": 4,
+        "code": "c-6-3",
+        "duke": "莊公",
+        "year": 6,
+        "text": "莊公",
+        "abbrev": "6"
+      }
+    ]
+  },
+  {
+    "id": 648,
+    "examType": "江西鄉試",
+    "session": 18,
+    "examYear": "嘉靖二十二年",
+    "questionSeq": 2,
+    "stockCount": 1,
+    "fullText": "僖公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "e-3-4",
+        "duke": "僖公",
+        "year": 3,
+        "text": "僖公",
+        "abbrev": "3"
+      }
+    ]
+  },
+  {
+    "id": 649,
+    "examType": "江西鄉試",
+    "session": 18,
+    "examYear": "嘉靖二十二年",
+    "questionSeq": 3,
+    "stockCount": 3,
+    "fullText": "僖公／襄公／昭公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "e-4-3",
+        "duke": "僖公",
+        "year": 4,
+        "text": "僖公",
+        "abbrev": "4"
+      },
+      {
+        "seq": 2,
+        "code": "i-11-6",
+        "duke": "襄公",
+        "year": 11,
+        "text": "襄公",
+        "abbrev": "11"
+      },
+      {
+        "seq": 3,
+        "code": "j-4-2",
+        "duke": "昭公",
+        "year": 4,
+        "text": "昭公",
+        "abbrev": "4"
+      }
+    ]
+  },
+  {
+    "id": 650,
+    "examType": "江西鄉試",
+    "session": 18,
+    "examYear": "嘉靖二十二年",
+    "questionSeq": 4,
+    "stockCount": 2,
+    "fullText": "宣公／宣公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "g-9-5",
+        "duke": "宣公",
+        "year": 9,
+        "text": "宣公",
+        "abbrev": "9"
+      },
+      {
+        "seq": 2,
+        "code": "g-9-5",
+        "duke": "宣公",
+        "year": 9,
+        "text": "宣公",
+        "abbrev": "9"
+      }
+    ]
+  },
+  {
+    "id": 651,
+    "examType": "江西鄉試",
+    "session": 19,
+    "examYear": "嘉靖二十五年",
+    "questionSeq": 1,
+    "stockCount": 4,
+    "fullText": "隱公／桓公／襄公／襄公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "a-8-4",
+        "duke": "隱公",
+        "year": 8,
+        "text": "隱公",
+        "abbrev": "8"
+      },
+      {
+        "seq": 2,
+        "code": "b-3-3",
+        "duke": "桓公",
+        "year": 3,
+        "text": "桓公",
+        "abbrev": "3"
+      },
+      {
+        "seq": 3,
+        "code": "i-11-4",
+        "duke": "襄公",
+        "year": 11,
+        "text": "襄公",
+        "abbrev": "11"
+      },
+      {
+        "seq": 4,
+        "code": "i-11-6",
+        "duke": "襄公",
+        "year": 11,
+        "text": "襄公",
+        "abbrev": "11"
+      }
+    ]
+  },
+  {
+    "id": 652,
+    "examType": "江西鄉試",
+    "session": 19,
+    "examYear": "嘉靖二十五年",
+    "questionSeq": 2,
+    "stockCount": 1,
+    "fullText": "閔公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "d-1-2",
+        "duke": "閔公",
+        "year": 1,
+        "text": "閔公",
+        "abbrev": "1"
+      }
+    ]
+  },
+  {
+    "id": 653,
+    "examType": "江西鄉試",
+    "session": 19,
+    "examYear": "嘉靖二十五年",
+    "questionSeq": 3,
+    "stockCount": 4,
+    "fullText": "僖公／僖公／僖公／僖公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "e-2-5",
+        "duke": "僖公",
+        "year": 2,
+        "text": "僖公",
+        "abbrev": "2"
+      },
+      {
+        "seq": 2,
+        "code": "e-3-1",
+        "duke": "僖公",
+        "year": 3,
+        "text": "僖公",
+        "abbrev": "3"
+      },
+      {
+        "seq": 3,
+        "code": "e-3-1",
+        "duke": "僖公",
+        "year": 3,
+        "text": "僖公",
+        "abbrev": "3"
+      },
+      {
+        "seq": 4,
+        "code": "e-3-3",
+        "duke": "僖公",
+        "year": 3,
+        "text": "僖公",
+        "abbrev": "3"
+      }
+    ]
+  },
+  {
+    "id": 654,
+    "examType": "江西鄉試",
+    "session": 19,
+    "examYear": "嘉靖二十五年",
+    "questionSeq": 4,
+    "stockCount": 8,
+    "fullText": "成公／成公／成公／成公／定公／定公／定公／定公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "h-16-6",
+        "duke": "成公",
+        "year": 16,
+        "text": "成公",
+        "abbrev": "16"
+      },
+      {
+        "seq": 2,
+        "code": "h-16-10",
+        "duke": "成公",
+        "year": 16,
+        "text": "成公",
+        "abbrev": "16"
+      },
+      {
+        "seq": 3,
+        "code": "h-17-2",
+        "duke": "成公",
+        "year": 17,
+        "text": "成公",
+        "abbrev": "17"
+      },
+      {
+        "seq": 4,
+        "code": "h-17-8",
+        "duke": "成公",
+        "year": 17,
+        "text": "成公",
+        "abbrev": "17"
+      },
+      {
+        "seq": 5,
+        "code": "k-10-2",
+        "duke": "定公",
+        "year": 10,
+        "text": "定公",
+        "abbrev": "10"
+      },
+      {
+        "seq": 6,
+        "code": "k-10-4",
+        "duke": "定公",
+        "year": 10,
+        "text": "定公",
+        "abbrev": "10"
+      },
+      {
+        "seq": 7,
+        "code": "k-12-3",
+        "duke": "定公",
+        "year": 12,
+        "text": "定公",
+        "abbrev": "12"
+      },
+      {
+        "seq": 8,
+        "code": "k-12-5",
+        "duke": "定公",
+        "year": 12,
+        "text": "定公",
+        "abbrev": "12"
+      }
+    ]
+  },
+  {
+    "id": 655,
+    "examType": "江西鄉試",
+    "session": 20,
+    "examYear": "嘉靖二十八年",
+    "questionSeq": 1,
+    "stockCount": 2,
+    "fullText": "莊公／莊公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "c-16-4",
+        "duke": "莊公",
+        "year": 16,
+        "text": "莊公",
+        "abbrev": "16"
+      },
+      {
+        "seq": 2,
+        "code": "c-27-2",
+        "duke": "莊公",
+        "year": 27,
+        "text": "莊公",
+        "abbrev": "27"
+      }
+    ]
+  },
+  {
+    "id": 656,
+    "examType": "江西鄉試",
+    "session": 20,
+    "examYear": "嘉靖二十八年",
+    "questionSeq": 2,
+    "stockCount": 2,
+    "fullText": "襄公／昭公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "i-11-1",
+        "duke": "襄公",
+        "year": 11,
+        "text": "襄公",
+        "abbrev": "11"
+      },
+      {
+        "seq": 2,
+        "code": "j-5-1",
+        "duke": "昭公",
+        "year": 5,
+        "text": "昭公",
+        "abbrev": "5"
+      }
+    ]
+  },
+  {
+    "id": 657,
+    "examType": "江西鄉試",
+    "session": 21,
+    "examYear": "嘉靖三十一年",
+    "questionSeq": 1,
+    "stockCount": 6,
+    "fullText": "莊公／閔公／僖公／文公／襄公／襄公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "c-6-2",
+        "duke": "莊公",
+        "year": 6,
+        "text": "莊公",
+        "abbrev": "6"
+      },
+      {
+        "seq": 2,
+        "code": "d-1-2",
+        "duke": "閔公",
+        "year": 1,
+        "text": "閔公",
+        "abbrev": "1"
+      },
+      {
+        "seq": 3,
+        "code": "e-18-1",
+        "duke": "僖公",
+        "year": 18,
+        "text": "僖公",
+        "abbrev": "18"
+      },
+      {
+        "seq": 4,
+        "code": "f-3-8",
+        "duke": "文公",
+        "year": 3,
+        "text": "文公",
+        "abbrev": "3"
+      },
+      {
+        "seq": 5,
+        "code": "i-15-3",
+        "duke": "襄公",
+        "year": 15,
+        "text": "襄公",
+        "abbrev": "15"
+      },
+      {
+        "seq": 6,
+        "code": "i-23-9",
+        "duke": "襄公",
+        "year": 23,
+        "text": "襄公",
+        "abbrev": "23"
+      }
+    ]
+  },
+  {
+    "id": 658,
+    "examType": "江西鄉試",
+    "session": 21,
+    "examYear": "嘉靖三十一年",
+    "questionSeq": 2,
+    "stockCount": 1,
+    "fullText": "僖公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "e-2-4",
+        "duke": "僖公",
+        "year": 2,
+        "text": "僖公",
+        "abbrev": "2"
+      }
+    ]
+  },
+  {
+    "id": 659,
+    "examType": "江西鄉試",
+    "session": 21,
+    "examYear": "嘉靖三十一年",
+    "questionSeq": 3,
+    "stockCount": 4,
+    "fullText": "僖公／文公／文公／成公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "e-26-3",
+        "duke": "僖公",
+        "year": 26,
+        "text": "僖公",
+        "abbrev": "26"
+      },
+      {
+        "seq": 2,
+        "code": "f-11-6",
+        "duke": "文公",
+        "year": 11,
+        "text": "文公",
+        "abbrev": "11"
+      },
+      {
+        "seq": 3,
+        "code": "f-18-5",
+        "duke": "文公",
+        "year": 18,
+        "text": "文公",
+        "abbrev": "18"
+      },
+      {
+        "seq": 4,
+        "code": "h-2-3",
+        "duke": "成公",
+        "year": 2,
+        "text": "成公",
+        "abbrev": "2"
+      }
+    ]
+  },
+  {
+    "id": 660,
+    "examType": "江西鄉試",
+    "session": 21,
+    "examYear": "嘉靖三十一年",
+    "questionSeq": 4,
+    "stockCount": 2,
+    "fullText": "昭公／昭公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "j-12-10",
+        "duke": "昭公",
+        "year": 12,
+        "text": "昭公",
+        "abbrev": "12"
+      },
+      {
+        "seq": 2,
+        "code": "j-15-5",
+        "duke": "昭公",
+        "year": 15,
+        "text": "昭公",
+        "abbrev": "15"
+      }
+    ]
+  },
+  {
+    "id": 661,
+    "examType": "江西鄉試",
+    "session": 22,
+    "examYear": "嘉靖三十四年",
+    "questionSeq": 1,
+    "stockCount": 2,
+    "fullText": "僖公／成公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "e-19-6",
+        "duke": "僖公",
+        "year": 19,
+        "text": "僖公",
+        "abbrev": "19"
+      },
+      {
+        "seq": 2,
+        "code": "h-2-9",
+        "duke": "成公",
+        "year": 2,
+        "text": "成公",
+        "abbrev": "2"
+      }
+    ]
+  },
+  {
+    "id": 662,
+    "examType": "江西鄉試",
+    "session": 22,
+    "examYear": "嘉靖三十四年",
+    "questionSeq": 2,
+    "stockCount": 1,
+    "fullText": "成公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "h-7-5",
+        "duke": "成公",
+        "year": 7,
+        "text": "成公",
+        "abbrev": "7"
+      }
+    ]
+  },
+  {
+    "id": 663,
+    "examType": "江西鄉試",
+    "session": 23,
+    "examYear": "嘉靖三十七年",
+    "questionSeq": 1,
+    "stockCount": 1,
+    "fullText": "隱公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "a-9-6",
+        "duke": "隱公",
+        "year": 9,
+        "text": "隱公",
+        "abbrev": "9"
+      }
+    ]
+  },
+  {
+    "id": 664,
+    "examType": "江西鄉試",
+    "session": 23,
+    "examYear": "嘉靖三十七年",
+    "questionSeq": 2,
+    "stockCount": 2,
+    "fullText": "僖公／襄公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "e-4-1",
+        "duke": "僖公",
+        "year": 4,
+        "text": "僖公",
+        "abbrev": "4"
+      },
+      {
+        "seq": 2,
+        "code": "i-11-6",
+        "duke": "襄公",
+        "year": 11,
+        "text": "襄公",
+        "abbrev": "11"
+      }
+    ]
+  },
+  {
+    "id": 665,
+    "examType": "江西鄉試",
+    "session": 23,
+    "examYear": "嘉靖三十七年",
+    "questionSeq": 3,
+    "stockCount": 2,
+    "fullText": "定公／定公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "k-10-2",
+        "duke": "定公",
+        "year": 10,
+        "text": "定公",
+        "abbrev": "10"
+      },
+      {
+        "seq": 2,
+        "code": "k-10-4",
+        "duke": "定公",
+        "year": 10,
+        "text": "定公",
+        "abbrev": "10"
+      }
+    ]
+  },
+  {
+    "id": 666,
+    "examType": "江西鄉試",
+    "session": 23,
+    "examYear": "嘉靖三十七年",
+    "questionSeq": 4,
+    "stockCount": 2,
+    "fullText": "文公／文公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "f-4-5",
+        "duke": "文公",
+        "year": 4,
+        "text": "文公",
+        "abbrev": "4"
+      },
+      {
+        "seq": 2,
+        "code": "f-10-2",
+        "duke": "文公",
+        "year": 10,
+        "text": "文公",
+        "abbrev": "10"
+      }
+    ]
+  },
+  {
+    "id": 667,
+    "examType": "江西鄉試",
+    "session": 24,
+    "examYear": "嘉靖四十年",
+    "questionSeq": 1,
+    "stockCount": 1,
+    "fullText": "隱公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "a-11-2",
+        "duke": "隱公",
+        "year": 11,
+        "text": "隱公",
+        "abbrev": "11"
+      }
+    ]
+  },
+  {
+    "id": 668,
+    "examType": "江西鄉試",
+    "session": 24,
+    "examYear": "嘉靖四十年",
+    "questionSeq": 2,
+    "stockCount": 4,
+    "fullText": "宣公／成公／成公／襄公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "g-15-2",
+        "duke": "宣公",
+        "year": 15,
+        "text": "宣公",
+        "abbrev": "15"
+      },
+      {
+        "seq": 2,
+        "code": "h-2-4",
+        "duke": "成公",
+        "year": 2,
+        "text": "成公",
+        "abbrev": "2"
+      },
+      {
+        "seq": 3,
+        "code": "h-15-3",
+        "duke": "成公",
+        "year": 15,
+        "text": "成公",
+        "abbrev": "15"
+      },
+      {
+        "seq": 4,
+        "code": "i-29-8",
+        "duke": "襄公",
+        "year": 29,
+        "text": "襄公",
+        "abbrev": "29"
+      }
+    ]
+  },
+  {
+    "id": 669,
+    "examType": "江西鄉試",
+    "session": 24,
+    "examYear": "嘉靖四十年",
+    "questionSeq": 3,
+    "stockCount": 2,
+    "fullText": "莊公／僖公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "c-31-4",
+        "duke": "莊公",
+        "year": 31,
+        "text": "莊公",
+        "abbrev": "31"
+      },
+      {
+        "seq": 2,
+        "code": "e-21-6",
+        "duke": "僖公",
+        "year": 21,
+        "text": "僖公",
+        "abbrev": "21"
+      }
+    ]
+  },
+  {
+    "id": 670,
+    "examType": "江西鄉試",
+    "session": 24,
+    "examYear": "嘉靖四十年",
+    "questionSeq": 4,
+    "stockCount": 1,
+    "fullText": "昭公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "j-20-2",
+        "duke": "昭公",
+        "year": 20,
+        "text": "昭公",
+        "abbrev": "20"
+      }
+    ]
+  },
+  {
+    "id": 671,
+    "examType": "江西鄉試",
+    "session": 25,
+    "examYear": "嘉靖四十三年",
+    "questionSeq": 1,
+    "stockCount": 1,
+    "fullText": "莊公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "c-15-3",
+        "duke": "莊公",
+        "year": 15,
+        "text": "莊公",
+        "abbrev": "15"
+      }
+    ]
+  },
+  {
+    "id": 672,
+    "examType": "江西鄉試",
+    "session": 25,
+    "examYear": "嘉靖四十三年",
+    "questionSeq": 2,
+    "stockCount": 4,
+    "fullText": "襄公／襄公／襄公／昭公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "i-11-4",
+        "duke": "襄公",
+        "year": 11,
+        "text": "襄公",
+        "abbrev": "11"
+      },
+      {
+        "seq": 2,
+        "code": "i-11-6",
+        "duke": "襄公",
+        "year": 11,
+        "text": "襄公",
+        "abbrev": "11"
+      },
+      {
+        "seq": 3,
+        "code": "i-11-8",
+        "duke": "襄公",
+        "year": 11,
+        "text": "襄公",
+        "abbrev": "11"
+      },
+      {
+        "seq": 4,
+        "code": "j-4-2",
+        "duke": "昭公",
+        "year": 4,
+        "text": "昭公",
+        "abbrev": "4"
+      }
+    ]
+  },
+  {
+    "id": 673,
+    "examType": "江西鄉試",
+    "session": 25,
+    "examYear": "嘉靖四十三年",
+    "questionSeq": 3,
+    "stockCount": 1,
+    "fullText": "宣公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "g-9-5",
+        "duke": "宣公",
+        "year": 9,
+        "text": "宣公",
+        "abbrev": "9"
+      }
+    ]
+  },
+  {
+    "id": 674,
+    "examType": "江西鄉試",
+    "session": 25,
+    "examYear": "嘉靖四十三年",
+    "questionSeq": 4,
+    "stockCount": 4,
+    "fullText": "定公／定公／定公／定公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "k-10-2",
+        "duke": "定公",
+        "year": 10,
+        "text": "定公",
+        "abbrev": "10"
+      },
+      {
+        "seq": 2,
+        "code": "k-10-4",
+        "duke": "定公",
+        "year": 10,
+        "text": "定公",
+        "abbrev": "10"
+      },
+      {
+        "seq": 3,
+        "code": "k-12-3",
+        "duke": "定公",
+        "year": 12,
+        "text": "定公",
+        "abbrev": "12"
+      },
+      {
+        "seq": 4,
+        "code": "k-12-5",
+        "duke": "定公",
+        "year": 12,
+        "text": "定公",
+        "abbrev": "12"
+      }
+    ]
+  },
+  {
+    "id": 675,
+    "examType": "江西鄉試",
+    "session": 26,
+    "examYear": "隆慶元年",
+    "questionSeq": 1,
+    "stockCount": 1,
+    "fullText": "隱公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "a-1-1",
+        "duke": "隱公",
+        "year": 1,
+        "text": "隱公",
+        "abbrev": "1"
+      }
+    ]
+  },
+  {
+    "id": 676,
+    "examType": "江西鄉試",
+    "session": 27,
+    "examYear": "隆慶四年",
+    "questionSeq": 1,
+    "stockCount": 2,
+    "fullText": "隱公／隱公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "a-1-2",
+        "duke": "隱公",
+        "year": 1,
+        "text": "隱公",
+        "abbrev": "1"
+      },
+      {
+        "seq": 2,
+        "code": "a-2-1",
+        "duke": "隱公",
+        "year": 2,
+        "text": "隱公",
+        "abbrev": "2"
+      }
+    ]
+  },
+  {
+    "id": 677,
+    "examType": "江西鄉試",
+    "session": 27,
+    "examYear": "隆慶四年",
+    "questionSeq": 2,
+    "stockCount": 1,
+    "fullText": "僖公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "e-9-2",
+        "duke": "僖公",
+        "year": 9,
+        "text": "僖公",
+        "abbrev": "9"
+      }
+    ]
+  },
+  {
+    "id": 678,
+    "examType": "江西鄉試",
+    "session": 27,
+    "examYear": "隆慶四年",
+    "questionSeq": 3,
+    "stockCount": 1,
+    "fullText": "宣公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "g-2-1",
+        "duke": "宣公",
+        "year": 2,
+        "text": "宣公",
+        "abbrev": "2"
+      }
+    ]
+  },
+  {
+    "id": 679,
+    "examType": "江西鄉試",
+    "session": 27,
+    "examYear": "隆慶四年",
+    "questionSeq": 4,
+    "stockCount": 3,
+    "fullText": "文公／宣公／成公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "f-6-3",
+        "duke": "文公",
+        "year": 6,
+        "text": "文公",
+        "abbrev": "6"
+      },
+      {
+        "seq": 2,
+        "code": "g-10-13",
+        "duke": "宣公",
+        "year": 10,
+        "text": "宣公",
+        "abbrev": "10"
+      },
+      {
+        "seq": 3,
+        "code": "h-6-9",
+        "duke": "成公",
+        "year": 6,
+        "text": "成公",
+        "abbrev": "6"
+      }
+    ]
+  },
+  {
+    "id": 680,
+    "examType": "江西鄉試",
+    "session": 28,
+    "examYear": "萬曆元年",
+    "questionSeq": 1,
+    "stockCount": 2,
+    "fullText": "僖公／僖公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "e-1-6",
+        "duke": "僖公",
+        "year": 1,
+        "text": "僖公",
+        "abbrev": "1"
+      },
+      {
+        "seq": 2,
+        "code": "e-3-4",
+        "duke": "僖公",
+        "year": 3,
+        "text": "僖公",
+        "abbrev": "3"
+      }
+    ]
+  },
+  {
+    "id": 681,
+    "examType": "江西鄉試",
+    "session": 28,
+    "examYear": "萬曆元年",
+    "questionSeq": 2,
+    "stockCount": 1,
+    "fullText": "昭公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "j-5-8",
+        "duke": "昭公",
+        "year": 5,
+        "text": "昭公",
+        "abbrev": "5"
+      }
+    ]
+  },
+  {
+    "id": 682,
+    "examType": "江西鄉試",
+    "session": 29,
+    "examYear": "萬曆四年",
+    "questionSeq": 1,
+    "stockCount": 2,
+    "fullText": "僖公／僖公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "e-9-2",
+        "duke": "僖公",
+        "year": 9,
+        "text": "僖公",
+        "abbrev": "9"
+      },
+      {
+        "seq": 2,
+        "code": "e-13-3",
+        "duke": "僖公",
+        "year": 13,
+        "text": "僖公",
+        "abbrev": "13"
+      }
+    ]
+  },
+  {
+    "id": 683,
+    "examType": "江西鄉試",
+    "session": 29,
+    "examYear": "萬曆四年",
+    "questionSeq": 2,
+    "stockCount": 2,
+    "fullText": "莊公／莊公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "c-10-1",
+        "duke": "莊公",
+        "year": 10,
+        "text": "莊公",
+        "abbrev": "10"
+      },
+      {
+        "seq": 2,
+        "code": "c-13-4",
+        "duke": "莊公",
+        "year": 13,
+        "text": "莊公",
+        "abbrev": "13"
+      }
+    ]
+  },
+  {
+    "id": 684,
+    "examType": "江西鄉試",
+    "session": 29,
+    "examYear": "萬曆四年",
+    "questionSeq": 3,
+    "stockCount": 2,
+    "fullText": "僖公／文公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "e-26-3",
+        "duke": "僖公",
+        "year": 26,
+        "text": "僖公",
+        "abbrev": "26"
+      },
+      {
+        "seq": 2,
+        "code": "f-11-6",
+        "duke": "文公",
+        "year": 11,
+        "text": "文公",
+        "abbrev": "11"
+      }
+    ]
+  },
+  {
+    "id": 685,
+    "examType": "江西鄉試",
+    "session": 29,
+    "examYear": "萬曆四年",
+    "questionSeq": 4,
+    "stockCount": 1,
+    "fullText": "定公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "k-4-4",
+        "duke": "定公",
+        "year": 4,
+        "text": "定公",
+        "abbrev": "4"
+      }
+    ]
+  },
+  {
+    "id": 686,
+    "examType": "江西鄉試",
+    "session": 30,
+    "examYear": "萬曆七年",
+    "questionSeq": 1,
+    "stockCount": 1,
+    "fullText": "桓公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "b-4-1",
+        "duke": "桓公",
+        "year": 4,
+        "text": "桓公",
+        "abbrev": "4"
+      }
+    ]
+  },
+  {
+    "id": 687,
+    "examType": "江西鄉試",
+    "session": 30,
+    "examYear": "萬曆七年",
+    "questionSeq": 2,
+    "stockCount": 1,
+    "fullText": "僖公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "e-4-1",
+        "duke": "僖公",
+        "year": 4,
+        "text": "僖公",
+        "abbrev": "4"
+      }
+    ]
+  },
+  {
+    "id": 688,
+    "examType": "江西鄉試",
+    "session": 30,
+    "examYear": "萬曆七年",
+    "questionSeq": 3,
+    "stockCount": 1,
+    "fullText": "宣公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "g-12-7",
+        "duke": "宣公",
+        "year": 12,
+        "text": "宣公",
+        "abbrev": "12"
+      }
+    ]
+  },
+  {
+    "id": 689,
+    "examType": "江西鄉試",
+    "session": 30,
+    "examYear": "萬曆七年",
+    "questionSeq": 4,
+    "stockCount": 5,
+    "fullText": "僖公／宣公／定公／定公／哀公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "e-4-3",
+        "duke": "僖公",
+        "year": 4,
+        "text": "僖公",
+        "abbrev": "4"
+      },
+      {
+        "seq": 2,
+        "code": "g-10-2",
+        "duke": "宣公",
+        "year": 10,
+        "text": "宣公",
+        "abbrev": "10"
+      },
+      {
+        "seq": 3,
+        "code": "k-10-2",
+        "duke": "定公",
+        "year": 10,
+        "text": "定公",
+        "abbrev": "10"
+      },
+      {
+        "seq": 4,
+        "code": "k-10-4",
+        "duke": "定公",
+        "year": 10,
+        "text": "定公",
+        "abbrev": "10"
+      },
+      {
+        "seq": 5,
+        "code": "l-8-3",
+        "duke": "哀公",
+        "year": 8,
+        "text": "哀公",
+        "abbrev": "8"
+      }
+    ]
+  },
+  {
+    "id": 690,
+    "examType": "江西鄉試",
+    "session": 31,
+    "examYear": "萬曆十年",
+    "questionSeq": 1,
+    "stockCount": 5,
+    "fullText": "莊公／僖公／成公／襄公／襄公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "c-10-1",
+        "duke": "莊公",
+        "year": 10,
+        "text": "莊公",
+        "abbrev": "10"
+      },
+      {
+        "seq": 2,
+        "code": "e-26-3",
+        "duke": "僖公",
+        "year": 26,
+        "text": "僖公",
+        "abbrev": "26"
+      },
+      {
+        "seq": 3,
+        "code": "h-8-2",
+        "duke": "成公",
+        "year": 8,
+        "text": "成公",
+        "abbrev": "8"
+      },
+      {
+        "seq": 4,
+        "code": "i-9-5",
+        "duke": "襄公",
+        "year": 9,
+        "text": "襄公",
+        "abbrev": "9"
+      },
+      {
+        "seq": 5,
+        "code": "i-9-5",
+        "duke": "襄公",
+        "year": 9,
+        "text": "襄公",
+        "abbrev": "9"
+      }
+    ]
+  },
+  {
+    "id": 691,
+    "examType": "江西鄉試",
+    "session": 31,
+    "examYear": "萬曆十年",
+    "questionSeq": 2,
+    "stockCount": 1,
+    "fullText": "昭公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "j-17-4",
+        "duke": "昭公",
+        "year": 17,
+        "text": "昭公",
+        "abbrev": "17"
+      }
+    ]
+  },
+  {
+    "id": 692,
+    "examType": "江西鄉試",
+    "session": 31,
+    "examYear": "萬曆十年",
+    "questionSeq": 3,
+    "stockCount": 2,
+    "fullText": "僖公／僖公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "e-3-6",
+        "duke": "僖公",
+        "year": 3,
+        "text": "僖公",
+        "abbrev": "3"
+      },
+      {
+        "seq": 2,
+        "code": "e-4-4",
+        "duke": "僖公",
+        "year": 4,
+        "text": "僖公",
+        "abbrev": "4"
+      }
+    ]
+  },
+  {
+    "id": 693,
+    "examType": "江西鄉試",
+    "session": 32,
+    "examYear": "萬曆十三年",
+    "questionSeq": 1,
+    "stockCount": 1,
+    "fullText": "莊公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "c-8-1",
+        "duke": "莊公",
+        "year": 8,
+        "text": "莊公",
+        "abbrev": "8"
+      }
+    ]
+  },
+  {
+    "id": 694,
+    "examType": "江西鄉試",
+    "session": 32,
+    "examYear": "萬曆十三年",
+    "questionSeq": 2,
+    "stockCount": 2,
+    "fullText": "宣公／宣公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "g-11-5",
+        "duke": "宣公",
+        "year": 11,
+        "text": "宣公",
+        "abbrev": "11"
+      },
+      {
+        "seq": 2,
+        "code": "g-12-2",
+        "duke": "宣公",
+        "year": 12,
+        "text": "宣公",
+        "abbrev": "12"
+      }
+    ]
+  },
+  {
+    "id": 695,
+    "examType": "江西鄉試",
+    "session": 32,
+    "examYear": "萬曆十三年",
+    "questionSeq": 3,
+    "stockCount": 4,
+    "fullText": "僖公／僖公／文公／襄公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "e-28-5",
+        "duke": "僖公",
+        "year": 28,
+        "text": "僖公",
+        "abbrev": "28"
+      },
+      {
+        "seq": 2,
+        "code": "e-28-8",
+        "duke": "僖公",
+        "year": 28,
+        "text": "僖公",
+        "abbrev": "28"
+      },
+      {
+        "seq": 3,
+        "code": "f-1-6",
+        "duke": "文公",
+        "year": 1,
+        "text": "文公",
+        "abbrev": "1"
+      },
+      {
+        "seq": 4,
+        "code": "i-11-5",
+        "duke": "襄公",
+        "year": 11,
+        "text": "襄公",
+        "abbrev": "11"
+      }
+    ]
+  },
+  {
+    "id": 696,
+    "examType": "江西鄉試",
+    "session": 33,
+    "examYear": "萬曆十六年",
+    "questionSeq": 1,
+    "stockCount": 1,
+    "fullText": "閔公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "d-1-2",
+        "duke": "閔公",
+        "year": 1,
+        "text": "閔公",
+        "abbrev": "1"
+      }
+    ]
+  },
+  {
+    "id": 697,
+    "examType": "江西鄉試",
+    "session": 33,
+    "examYear": "萬曆十六年",
+    "questionSeq": 2,
+    "stockCount": 4,
+    "fullText": "定公／定公／哀公／哀公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "k-10-2",
+        "duke": "定公",
+        "year": 10,
+        "text": "定公",
+        "abbrev": "10"
+      },
+      {
+        "seq": 2,
+        "code": "k-10-4",
+        "duke": "定公",
+        "year": 10,
+        "text": "定公",
+        "abbrev": "10"
+      },
+      {
+        "seq": 3,
+        "code": "l-13-3",
+        "duke": "哀公",
+        "year": 13,
+        "text": "哀公",
+        "abbrev": "13"
+      },
+      {
+        "seq": 4,
+        "code": "l-13-5",
+        "duke": "哀公",
+        "year": 13,
+        "text": "哀公",
+        "abbrev": "13"
+      }
+    ]
+  },
+  {
+    "id": 698,
+    "examType": "江西鄉試",
+    "session": 34,
+    "examYear": "萬曆十九年",
+    "questionSeq": 1,
+    "stockCount": 1,
+    "fullText": "文公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "f-1-6",
+        "duke": "文公",
+        "year": 1,
+        "text": "文公",
+        "abbrev": "1"
+      }
+    ]
+  },
+  {
+    "id": 699,
+    "examType": "江西鄉試",
+    "session": 35,
+    "examYear": "天啟七年",
+    "questionSeq": 1,
+    "stockCount": 3,
+    "fullText": "僖公／僖公／僖公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "e-2-4",
+        "duke": "僖公",
+        "year": 2,
+        "text": "僖公",
+        "abbrev": "2"
+      },
+      {
+        "seq": 2,
+        "code": "e-3-4",
+        "duke": "僖公",
+        "year": 3,
+        "text": "僖公",
+        "abbrev": "3"
+      },
+      {
+        "seq": 3,
+        "code": "e-4-1",
+        "duke": "僖公",
+        "year": 4,
+        "text": "僖公",
+        "abbrev": "4"
+      }
+    ]
+  },
+  {
+    "id": 700,
+    "examType": "江西鄉試",
+    "session": 35,
+    "examYear": "天啟七年",
+    "questionSeq": 2,
+    "stockCount": 1,
+    "fullText": "文公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "f-9-11",
+        "duke": "文公",
+        "year": 9,
+        "text": "文公",
+        "abbrev": "9"
+      }
+    ]
+  },
+  {
+    "id": 701,
+    "examType": "江西鄉試",
+    "session": 35,
+    "examYear": "天啟七年",
+    "questionSeq": 3,
+    "stockCount": 3,
+    "fullText": "宣公／宣公／宣公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "g-1-12",
+        "duke": "宣公",
+        "year": 1,
+        "text": "宣公",
+        "abbrev": "1"
+      },
+      {
+        "seq": 2,
+        "code": "g-1-10",
+        "duke": "宣公",
+        "year": 1,
+        "text": "宣公",
+        "abbrev": "1"
+      },
+      {
+        "seq": 3,
+        "code": "g-1-14",
+        "duke": "宣公",
+        "year": 1,
+        "text": "宣公",
+        "abbrev": "1"
+      }
+    ]
+  },
+  {
+    "id": 702,
+    "examType": "江西鄉試",
+    "session": 35,
+    "examYear": "天啟七年",
+    "questionSeq": 4,
+    "stockCount": 1,
+    "fullText": "哀公",
+    "source": "",
+    "stocks": [
+      {
+        "seq": 1,
+        "code": "l-7-4",
+        "duke": "哀公",
+        "year": 7,
+        "text": "哀公",
+        "abbrev": "7"
+      }
+    ]
   }
 ]
