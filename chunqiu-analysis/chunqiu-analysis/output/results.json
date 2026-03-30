@@ -1,0 +1,596 @@
+{
+  "data_info": {
+    "n_exams": 46,
+    "year_range": "1400-1586"
+  },
+  "t_test": {
+    "breakpoint_year": 1478,
+    "pre": {
+      "n": 19,
+      "mean": 3.474,
+      "sd": 0.833
+    },
+    "post": {
+      "n": 27,
+      "mean": 1.769,
+      "sd": 0.563
+    },
+    "t_stat": 7.763,
+    "df_welch": 29.34,
+    "p_value": "1.35e-08",
+    "pooled_sd": 0.6864,
+    "cohens_d": 2.484,
+    "hedges_g": 2.442,
+    "eta_squared": 0.673
+  },
+  "changepoint": {
+    "avg_stocks": {
+      "PELT": {
+        "penalty": 4.424,
+        "breakpoints": [
+          {
+            "index": 20,
+            "era": "成化十七年",
+            "year": 1481
+          }
+        ]
+      },
+      "BinSeg_k1": {
+        "breakpoints": [
+          {
+            "index": 20,
+            "era": "成化十七年",
+            "year": 1481
+          }
+        ]
+      },
+      "BinSeg_k2": {
+        "breakpoints": [
+          {
+            "index": 15,
+            "era": "成化二年",
+            "year": 1466
+          },
+          {
+            "index": 20,
+            "era": "成化十七年",
+            "year": 1481
+          }
+        ]
+      },
+      "BinSeg_k3": {
+        "breakpoints": [
+          {
+            "index": 15,
+            "era": "成化二年",
+            "year": 1466
+          },
+          {
+            "index": 20,
+            "era": "成化十七年",
+            "year": 1481
+          },
+          {
+            "index": 30,
+            "era": "正德九年",
+            "year": 1514
+          }
+        ]
+      },
+      "BottomUp_k1": {
+        "breakpoints": [
+          {
+            "index": 15,
+            "era": "成化二年",
+            "year": 1466
+          }
+        ]
+      },
+      "BottomUp_k2": {
+        "breakpoints": [
+          {
+            "index": 15,
+            "era": "成化二年",
+            "year": 1466
+          },
+          {
+            "index": 30,
+            "era": "正德九年",
+            "year": 1514
+          }
+        ]
+      },
+      "BottomUp_k3": {
+        "breakpoints": [
+          {
+            "index": 15,
+            "era": "成化二年",
+            "year": 1466
+          },
+          {
+            "index": 20,
+            "era": "成化十七年",
+            "year": 1481
+          },
+          {
+            "index": 30,
+            "era": "正德九年",
+            "year": 1514
+          }
+        ]
+      },
+      "DynProg_k1": {
+        "breakpoints": [
+          {
+            "index": 20,
+            "era": "成化十七年",
+            "year": 1481
+          }
+        ]
+      },
+      "DynProg_k2": {
+        "breakpoints": [
+          {
+            "index": 15,
+            "era": "成化二年",
+            "year": 1466
+          },
+          {
+            "index": 30,
+            "era": "正德九年",
+            "year": 1514
+          }
+        ]
+      },
+      "DynProg_k3": {
+        "breakpoints": [
+          {
+            "index": 15,
+            "era": "成化二年",
+            "year": 1466
+          },
+          {
+            "index": 20,
+            "era": "成化十七年",
+            "year": 1481
+          },
+          {
+            "index": 30,
+            "era": "正德九年",
+            "year": 1514
+          }
+        ]
+      },
+      "CUSUM": {
+        "max_index": 17,
+        "max_value": 19.2391,
+        "era": "成化十一年",
+        "year": 1475
+      },
+      "BIC": {
+        "best_k": 1,
+        "scores": {
+          "1": {
+            "bic": -22.6335,
+            "breakpoints": [
+              {
+                "index": 20,
+                "era": "成化十七年",
+                "year": 1481
+              }
+            ]
+          },
+          "2": {
+            "bic": -22.0519,
+            "breakpoints": [
+              {
+                "index": 15,
+                "era": "成化二年",
+                "year": 1466
+              },
+              {
+                "index": 30,
+                "era": "正德九年",
+                "year": 1514
+              }
+            ]
+          },
+          "3": {
+            "bic": -18.2725,
+            "breakpoints": [
+              {
+                "index": 15,
+                "era": "成化二年",
+                "year": 1466
+              },
+              {
+                "index": 20,
+                "era": "成化十七年",
+                "year": 1481
+              },
+              {
+                "index": 30,
+                "era": "正德九年",
+                "year": 1514
+              }
+            ]
+          },
+          "4": {
+            "bic": -13.6491,
+            "breakpoints": [
+              {
+                "index": 5,
+                "era": "正統元年",
+                "year": 1436
+              },
+              {
+                "index": 15,
+                "era": "成化二年",
+                "year": 1466
+              },
+              {
+                "index": 20,
+                "era": "成化十七年",
+                "year": 1481
+              },
+              {
+                "index": 30,
+                "era": "正德九年",
+                "year": 1514
+              }
+            ]
+          },
+          "5": {
+            "bic": -7.4555,
+            "breakpoints": [
+              {
+                "index": 5,
+                "era": "正統元年",
+                "year": 1436
+              },
+              {
+                "index": 15,
+                "era": "成化二年",
+                "year": 1466
+              },
+              {
+                "index": 20,
+                "era": "成化十七年",
+                "year": 1481
+              },
+              {
+                "index": 25,
+                "era": "弘治十二年",
+                "year": 1499
+              },
+              {
+                "index": 30,
+                "era": "正德九年",
+                "year": 1514
+              }
+            ]
+          },
+          "6": {
+            "bic": -0.026,
+            "breakpoints": [
+              {
+                "index": 5,
+                "era": "正統元年",
+                "year": 1436
+              },
+              {
+                "index": 15,
+                "era": "成化二年",
+                "year": 1466
+              },
+              {
+                "index": 20,
+                "era": "成化十七年",
+                "year": 1481
+              },
+              {
+                "index": 25,
+                "era": "弘治十二年",
+                "year": 1499
+              },
+              {
+                "index": 30,
+                "era": "正德九年",
+                "year": 1514
+              },
+              {
+                "index": 35,
+                "era": "嘉靖八年",
+                "year": 1529
+              }
+            ]
+          }
+        }
+      }
+    },
+    "dati_rate": {
+      "PELT": {
+        "penalty": 0.3144,
+        "breakpoints": [
+          {
+            "index": 20,
+            "era": "成化十七年",
+            "year": 1481
+          }
+        ]
+      },
+      "BinSeg_k1": {
+        "breakpoints": [
+          {
+            "index": 20,
+            "era": "成化十七年",
+            "year": 1481
+          }
+        ]
+      },
+      "BinSeg_k2": {
+        "breakpoints": [
+          {
+            "index": 20,
+            "era": "成化十七年",
+            "year": 1481
+          },
+          {
+            "index": 30,
+            "era": "正德九年",
+            "year": 1514
+          }
+        ]
+      },
+      "BinSeg_k3": {
+        "breakpoints": [
+          {
+            "index": 15,
+            "era": "成化二年",
+            "year": 1466
+          },
+          {
+            "index": 20,
+            "era": "成化十七年",
+            "year": 1481
+          },
+          {
+            "index": 30,
+            "era": "正德九年",
+            "year": 1514
+          }
+        ]
+      },
+      "BottomUp_k1": {
+        "breakpoints": [
+          {
+            "index": 20,
+            "era": "成化十七年",
+            "year": 1481
+          }
+        ]
+      },
+      "BottomUp_k2": {
+        "breakpoints": [
+          {
+            "index": 20,
+            "era": "成化十七年",
+            "year": 1481
+          },
+          {
+            "index": 35,
+            "era": "嘉靖八年",
+            "year": 1529
+          }
+        ]
+      },
+      "BottomUp_k3": {
+        "breakpoints": [
+          {
+            "index": 20,
+            "era": "成化十七年",
+            "year": 1481
+          },
+          {
+            "index": 35,
+            "era": "嘉靖八年",
+            "year": 1529
+          },
+          {
+            "index": 40,
+            "era": "隆慶二年",
+            "year": 1568
+          }
+        ]
+      },
+      "DynProg_k1": {
+        "breakpoints": [
+          {
+            "index": 20,
+            "era": "成化十七年",
+            "year": 1481
+          }
+        ]
+      },
+      "DynProg_k2": {
+        "breakpoints": [
+          {
+            "index": 15,
+            "era": "成化二年",
+            "year": 1466
+          },
+          {
+            "index": 30,
+            "era": "正德九年",
+            "year": 1514
+          }
+        ]
+      },
+      "DynProg_k3": {
+        "breakpoints": [
+          {
+            "index": 15,
+            "era": "成化二年",
+            "year": 1466
+          },
+          {
+            "index": 20,
+            "era": "成化十七年",
+            "year": 1481
+          },
+          {
+            "index": 30,
+            "era": "正德九年",
+            "year": 1514
+          }
+        ]
+      },
+      "CUSUM": {
+        "max_index": 17,
+        "max_value": 4.3152,
+        "era": "成化十一年",
+        "year": 1475
+      },
+      "BIC": {
+        "best_k": 1,
+        "scores": {
+          "1": {
+            "bic": -128.6247,
+            "breakpoints": [
+              {
+                "index": 20,
+                "era": "成化十七年",
+                "year": 1481
+              }
+            ]
+          },
+          "2": {
+            "bic": -125.1855,
+            "breakpoints": [
+              {
+                "index": 15,
+                "era": "成化二年",
+                "year": 1466
+              },
+              {
+                "index": 30,
+                "era": "正德九年",
+                "year": 1514
+              }
+            ]
+          },
+          "3": {
+            "bic": -119.2901,
+            "breakpoints": [
+              {
+                "index": 15,
+                "era": "成化二年",
+                "year": 1466
+              },
+              {
+                "index": 20,
+                "era": "成化十七年",
+                "year": 1481
+              },
+              {
+                "index": 30,
+                "era": "正德九年",
+                "year": 1514
+              }
+            ]
+          },
+          "4": {
+            "bic": -114.1976,
+            "breakpoints": [
+              {
+                "index": 15,
+                "era": "成化二年",
+                "year": 1466
+              },
+              {
+                "index": 20,
+                "era": "成化十七年",
+                "year": 1481
+              },
+              {
+                "index": 35,
+                "era": "嘉靖八年",
+                "year": 1529
+              },
+              {
+                "index": 40,
+                "era": "隆慶二年",
+                "year": 1568
+              }
+            ]
+          },
+          "5": {
+            "bic": -107.3922,
+            "breakpoints": [
+              {
+                "index": 15,
+                "era": "成化二年",
+                "year": 1466
+              },
+              {
+                "index": 20,
+                "era": "成化十七年",
+                "year": 1481
+              },
+              {
+                "index": 30,
+                "era": "正德九年",
+                "year": 1514
+              },
+              {
+                "index": 35,
+                "era": "嘉靖八年",
+                "year": 1529
+              },
+              {
+                "index": 40,
+                "era": "隆慶二年",
+                "year": 1568
+              }
+            ]
+          },
+          "6": {
+            "bic": -99.7887,
+            "breakpoints": [
+              {
+                "index": 5,
+                "era": "正統元年",
+                "year": 1436
+              },
+              {
+                "index": 15,
+                "era": "成化二年",
+                "year": 1466
+              },
+              {
+                "index": 20,
+                "era": "成化十七年",
+                "year": 1481
+              },
+              {
+                "index": 30,
+                "era": "正德九年",
+                "year": 1514
+              },
+              {
+                "index": 35,
+                "era": "嘉靖八年",
+                "year": 1529
+              },
+              {
+                "index": 40,
+                "era": "隆慶二年",
+                "year": 1568
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
